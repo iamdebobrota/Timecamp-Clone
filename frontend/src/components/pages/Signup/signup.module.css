@@ -36,6 +36,40 @@
     margin-top: 5rem;
     height: 7rem;
 }
+.formGroupUpper{
+    text-align: center;
+}
 .formGroupH3Tag{
     font-size: 36px;
+}
+.formGroupH4Tag{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 1.7rem 0;
+    color: #767676;
+}
+.formGroupH5Tag{
+    font-size: 16px;
+    color: #767676;
+}
+.googleButton{
+    padding: 0.8rem 0.5rem;
+    background-color: white;
+    border: 1px solid #e9e9e9;
+    background-size: 7%;
+    background-position-x: 6rem;
+    margin: 1.3rem 0;
+    width: 100%;
+    border-radius:8px;
+    font-size: 14px;
+    line-height: 1.33;
+}
+.googleBtnAnchor{
+    font-weight: 700;
+    color: #767676;
+    text-decoration: none;
+}
+.formInputs{
+    margin: 1.3rem 0;
+    font-size: 10px;
 }
