@@ -9,7 +9,9 @@ const Routes = () => {
         <Footer/>
         <Features/>
     </div>
+
   )
 }
+  
 
 export default Routes
