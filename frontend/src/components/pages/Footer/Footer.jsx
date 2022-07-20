@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 74a64b6534fd6cfc94a64ddd61b67b47b6606058
 import React from 'react'
 import style from './footer.module.css'
 import { FaFacebookF } from 'react-icons/fa';
