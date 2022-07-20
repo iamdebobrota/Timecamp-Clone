@@ -6,8 +6,8 @@ const Routes = () => {
   return (
     <div>
         
-        <Footer/>
         <Features/>
+        <Footer/>
     </div>
 
   )
