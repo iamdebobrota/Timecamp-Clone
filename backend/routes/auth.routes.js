@@ -15,3 +15,19 @@ authRouter.post("/signup", async (req, res) => {
     console.log("Signed Up Successfully")
 })
 
+authRouter.post("/login", async (req, res)=>{
+    const checkClient = await ClientModel.find(req.body);
+    if(checkClient.length>=1){
+        let {name, _id} = checkClient[0];
+        let payload = {
+            _id,
+            name,
+            token :789789
+        }
+        console.log("Logged in Successfully");
+        return res.send(payload)
+    }
+    res.send({message: "Wrong credentials"})
+})
+
+module.exports = authRouter ;
