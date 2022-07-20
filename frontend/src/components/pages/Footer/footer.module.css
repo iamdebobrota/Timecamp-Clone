@@ -8,7 +8,11 @@
 .footer_main{
     margin: auto;
     padding: 5rem;
+<<<<<<< HEAD
+    background-color: rgb(255, 255, 255);
+=======
     background-color: white;
+>>>>>>> 74a64b6534fd6cfc94a64ddd61b67b47b6606058
 }
 .footer{
     display: grid;
@@ -41,6 +45,21 @@
 }
 .copyright{
     margin: auto;
+<<<<<<< HEAD
+    margin-top: 4rem;
+}
+.copyright_icon {
+display: flex;
+gap: 25px;
+align-items: center;
+justify-content: center;
+color: rgba(128, 128, 128, 0.625);
+}
+.copyright p:nth-child(2){
+    font-size: 16px;
+    color: rgb(92, 92, 92);
+    margin-top: 1rem;
+=======
     margin-top: 3rem;
    
 
@@ -55,6 +74,7 @@ color: gray;
 .copyright p:nth-child(2){
     font-size: 15px;
     color: rgb(92, 92, 92);
+>>>>>>> 74a64b6534fd6cfc94a64ddd61b67b47b6606058
 }
 .copyright p:nth-child(3){
     font-size: 12px;
