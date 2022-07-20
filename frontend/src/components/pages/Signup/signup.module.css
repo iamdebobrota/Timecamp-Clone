@@ -6,19 +6,17 @@
     margin-top:5rem ;
 }
 .leftDivInMain{
-    border: 1px solid red;
     width: 57%;
     padding: 1rem;
 }
 .rightDivInMain{
     box-shadow: 0 4px 10px 2px rgb(0 0 0 / 17%);
     border-radius: 26px;
-    padding: 2rem 6rem;
+    padding: 2rem 5rem;
     width: 42%
 }
 
 .reviewColumns {
-    border: 1px solid black;
     display: flex;
     gap: 3rem;
     margin-top:0.5rem
@@ -38,8 +36,6 @@
     margin-top: 5rem;
     height: 7rem;
 }
-.rightDivInMain{
-    box-shadow: 0 4px 10px 2px rgb(0 0 0 / 17%);
-    border-radius: 26px;
-    padding: 2rem 6rem;
+.formGroupH3Tag{
+    font-size: 36px;
 }

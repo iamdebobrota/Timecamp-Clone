@@ -36,7 +36,14 @@ const Signup = () => {
               
             </div>
             <div className={styles.rightDivInMain}>
-                
+                <div class="form-group__head col-sm-12">
+                    <h3 className={styles.formGroupH3Tag} >Start tracking time</h3>
+                    <h4>Create an account and start with a free 14-day trial</h4>
+                    <h5>All features. No credit card required</h5>
+                    <a href="https://app.timecamp.com/auth/google_auth/register" class="btn btn-lg btn-default form-group__head--googleBtn" id="googleButton">
+                    Sign up with Google </a>
+                    <span>Or</span>
+                </div>
             </div>
         </div>
   
