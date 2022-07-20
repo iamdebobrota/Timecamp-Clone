@@ -1,12 +1,8 @@
 import React from 'react'
-import style from './features.module.css'
-
 
 const Features = () => {
   return (
-    <div className={style.style}>
-         
-    </div>
+    <div>Features</div>
   )
 }
 
