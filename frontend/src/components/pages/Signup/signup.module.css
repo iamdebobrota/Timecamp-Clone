@@ -64,6 +64,9 @@
   font-size: 14px;
   line-height: 1.33;
 }
+.googleButton:hover {
+  background-color: whitesmoke;
+}
 .googleBtnAnchor {
   font-weight: 700;
   color: #767676;

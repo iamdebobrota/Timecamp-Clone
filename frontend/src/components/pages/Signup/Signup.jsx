@@ -18,7 +18,7 @@ const Signup = () => {
   const handleSignup = (e) => {
     e.preventDefault();
     let payload = JSON.stringify(client);
-    // console.log('payload: ', payload);
+    console.log('payload: ', payload);
     fetch("https://timecampclone.herokuapp.com/auth/signup", {
       headers: {
         "Content-Type": "application/json",
@@ -27,7 +27,7 @@ const Signup = () => {
       body: payload,
     })
       .then((res) => res.json())
-      .then((res) => navigate("/login"))
+      .then((res) => navigate("/auth/login"))
       .catch((err) => console.log(err));
   };
 
@@ -91,7 +91,7 @@ const Signup = () => {
               href="https://app.timecamp.com/auth/google_auth/register"
               id="googleButton"
             >
-              Sign up with Google{" "}
+              Sign up with Google
             </a>
           </button>
           <span style={{ margin: "auto 0px" }}>Or</span>
@@ -103,6 +103,7 @@ const Signup = () => {
             onChange={handleChange}
             className="form-control"
             placeholder="Email"
+            required
           />
         </div>
         <div className={styles.formInputs}>
@@ -112,6 +113,7 @@ const Signup = () => {
             onChange={handleChange}
             className="form-control"
             placeholder="Password"
+            required
           />
         </div>
         <div className={styles.formInputs}>
@@ -121,6 +123,7 @@ const Signup = () => {
             onChange={handleChange}
             className="form-control"
             placeholder="Phone (optional)"
+            required
           />
         </div>
 
