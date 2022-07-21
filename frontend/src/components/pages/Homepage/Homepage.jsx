@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Fields } from "./Fields";
 
 const Container = styled.div`
   width: 100%;
@@ -383,6 +384,7 @@ export const Homepage = () => {
           </h2>
         </div>
       </Demo>
+      <Fields/>
     </div>
   );
 };
