@@ -231,6 +231,58 @@ const ImgDiv = styled.div`
   }
 `;
 
+const Demo = styled.div`
+  margin-top: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+
+  & div {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    & h2{
+      font-size: 36px;
+      font-weight: 800;
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      font-family: lato,sans-serif;
+    }
+  }
+
+  & div:first-child {
+    margin: 2rem 0 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &>p{
+      margin-bottom: 0;
+      margin-top: 0;
+      font-weight: 700;
+      padding-right: 1rem;
+    }
+    &>a{
+      text-decoration: none;
+      color: #25cf60!important;
+      cursor: pointer;
+      font-weight: 700;
+    }
+  }
+
+  
+`;
+
 export const Homepage = () => {
   return (
     <div>
@@ -318,6 +370,19 @@ export const Homepage = () => {
           </ImgDiv>
         </Row>
       </Green>
+
+      <Demo>
+        <div>
+          <p>Want to track time in your team ?</p>
+          <a href="#">Book a Demo</a>
+        </div>
+        <div>
+          <h2>
+            Try an automatic, easy-to-use time tracker for the entire
+            organization!
+          </h2>
+        </div>
+      </Demo>
     </div>
   );
 };
