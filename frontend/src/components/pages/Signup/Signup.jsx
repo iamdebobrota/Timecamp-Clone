@@ -1,7 +1,35 @@
 import React from 'react'
+import { useState } from 'react'
 import styles from "./signup.module.css"
 
 const Signup = () => {
+
+    const [client, setClient] = useState({});
+
+    const handleChange=(e)=>{
+        let {name , value } = e.target
+        setClient({
+            ...client, 
+            [name]: value
+        })
+    }
+
+    const handleSignup=(e)=>{
+        e.preventDefault()
+        let payload = JSON.stringify(client);
+        // console.log('payload: ', payload);
+        fetch("https://timecampclone.herokuapp.com/auth/signup", {
+            headers:{
+                "Content-Type": "application/json",
+            },
+            method: "POST",
+            body: payload
+        })
+        .then((res)=> res.json())
+        .then((res) => )
+        
+    }
+
   return (
  
        
@@ -48,13 +76,25 @@ const Signup = () => {
                     <span style={{margin:'auto 0px'}}>Or</span>
                 </div>
                 <div className={styles.formInputs}>
-                   <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Email" />
+                   <input name="email" type="string" onChange={handleChange} className="form-control" placeholder="Email" />
                 </div>
                 <div className={styles.formInputs}>
-                   <input type="password" className="form-control" id="exampleFormControlInput1" placeholder="Password" />
+                   <input name="password" type="string" onChange={handleChange} className="form-control" placeholder="Password" />
                 </div>
                 <div className={styles.formInputs}>
-                   <input type="number" className="form-control" id="exampleFormControlInput1" placeholder="Phone (optional)" />
+                   <input name="phone" type="number" onChange={handleChange} className="form-control" placeholder="Phone (optional)" />
+                </div>
+
+                <div className={styles.formButtonDiv}>
+                    <button onClick={handleSignup} style={{borderRadius:'25px'}} className="btn btn-lg btn-success g-recaptcha" >Sign up for free</button>
+                </div>
+
+                <div className="form-group__termsPrivacy col-sm-12">
+                    <p className={styles.reviewColumnSinglePTag}>By signing up you agree to our
+                         <a className={styles.signUpTerms} href="https://app.timecamp.com/page/terms"> Terms of Service </a>
+                         and 
+                         <a className={styles.signUpTerms} href="https://app.timecamp.com/page/privacy"> Privacy Policy</a>
+                    </p>
                 </div>
             </div>
         </div>
