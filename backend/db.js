@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
+require("dotenv").config();
 
- const connection = mongoose.connect("mongodb://127.0.0.1:27017/timecampclone");
+const mongodb_url = process.env.MONGODB_URL
+ 
+ const connection = mongoose.connect(mongodb_url);
 
- module.exports = connection
+ module.exports = connection 

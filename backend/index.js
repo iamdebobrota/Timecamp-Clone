@@ -1,11 +1,15 @@
 const express = require('express');
 const connection = require("./db")
-
+const cors = require('cors')
+require("dotenv").config();
 const authRouter = require("./routes/auth.routes");
+
+const PORT = process.env.PORT
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 app.use("/auth", authRouter);
 
 
@@ -14,7 +18,7 @@ app.get("/", (req,res)=>{
 })
 
 
-app.listen(8080, async () =>{
+app.listen(PORT, async () =>{
     try{
         await connection
         console.log("connected to db")
@@ -23,5 +27,5 @@ app.listen(8080, async () =>{
         console.log('err: ', err);
         
     }
-    console.log("listening on http://127.0.0.1:8080")
+    console.log(`listening on http://127.0.0.1:${PORT}`)
 })
