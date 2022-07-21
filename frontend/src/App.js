@@ -1,9 +1,13 @@
 import './App.css';
-import Routes from './components/Routes/Routes';
+// import Sidebar from './components/pages/TimeSheet/Sidebar';
+import SideNavbar from './components/pages/TimeSheet/SideNavbar';
+// import Routes from './components/Routes/Routes';
 function App() {
   return (
     <div className="App">
-      <Routes/>
+      {/* <Routes/> */}
+      <SideNavbar/>
+      {/* <Sidebar/> */}
   </div>
   );
 }

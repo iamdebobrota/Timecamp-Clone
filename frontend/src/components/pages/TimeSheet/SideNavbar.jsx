@@ -9,14 +9,19 @@ import React from "react";
 
 import "./SideNavbar.scss";
 import { Link } from "react-router-dom";
-import { AiOutlineLeft, AiOutlineDashboard } from "react-icons/ai";
-import { FaRegCalendarAlt, FaSearchPlus } from "react-icons/fa";
+import { AiOutlineLeft, AiOutlineDashboard ,AiOutlinePieChart, AiOutlineApartment} from "react-icons/ai";
+import { FaRegCalendarAlt,  FaRegMoneyBillAlt } from "react-icons/fa";
 
 import { GrPieChart, GrPersonalComputer } from "react-icons/gr";
-import { BsChevronRight , BsTags, BsPeople, BsBarChart} from "react-icons/bs";
+import { BsChevronRight , BsTags, BsPeople, BsBarChart,BsZoomIn} from "react-icons/bs";
 import { VscFileSubmodule } from "react-icons/vsc";
 import { IoMdTime } from "react-icons/io";
-import { BiBorderAll } from "react-icons/bi";
+import { BiBorderAll , BiPointer} from "react-icons/bi";
+import { MdPeopleOutline , MdOutlineAttachMoney} from "react-icons/md";
+import { GoListUnordered } from "react-icons/go";
+import { RiSignalTowerLine } from "react-icons/ri";
+import { TbRocket,TbMicrophone2 } from "react-icons/tb";
+
 
 // A <span>›> </span>
 
@@ -66,9 +71,23 @@ export default function SideNavbar() {
                 </span>{" "}
                 <p>Dashboard </p>
               </Link> 
+            </li>
+            <li className="dashboard" id="clickhere">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  {" "}
+                  <GrPieChart />
+                </span>{" "}
+                <p>Reports </p>{" "}
+                <span className="spanleftgr">
+                  <BsChevronRight />
+                </span>
+              </Link>
+
               {/* start */}
+
               <ul className="dropdown_tow">
-              <p className="ana-para"> Time Reports </p>
+              <p className="ana-para"> TIME REPORTS </p>
               <li className="dashboard">
               <Link to="#" className="dash">
                 <span className="spanright">
@@ -81,7 +100,7 @@ export default function SideNavbar() {
               <li className="dashboard">
               <Link to="#" className="dash">
                 <span className="spanright">
-                  <FaSearchPlus />
+                  <BsZoomIn />
                 </span>{" "}
                 <p>Detailed</p>
               </Link>
@@ -105,24 +124,112 @@ export default function SideNavbar() {
               </Link>
             </li>
             {/* 4 */}
+              <hr />
+            <p className="ana-para"> PEOPLE REPORTS </p>
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <MdPeopleOutline />
+                </span>{" "}
+                <p>People by tasks </p>
+              </Link>
+              </li>
+              {/* 5 */}
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <MdPeopleOutline />
+                </span>{" "}
+                <p>People by tasks </p>
+              </Link>
+              </li>
+              {/* 6 */}
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <MdPeopleOutline />
+                </span>{" "}
+                <p>People by days</p>
+              </Link>
+              </li>
+              {/* 7 */}
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <MdPeopleOutline />
+                </span>{" "}
+                <p>People by projects</p>
+              </Link>
+              </li>
+                  {/* budgeting reports 8 */}
+
+                  <hr />
+              <p className="ana-para"> BUDGETING REPORTS </p>
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <FaRegMoneyBillAlt />
+                </span>{" "}
+                <p>Billable,unbillable,invoiced</p>
+              </Link>
+              </li>
+              {/* 9 */}
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <GoListUnordered />
+                </span>{" "}
+                <p>Estimates</p>
+              </Link>
+              </li>
+              {/* 10 */}
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <MdOutlineAttachMoney />
+                </span>{" "}
+                <p>Revenues</p>
+              </Link>
+              </li>
+              {/* 11 */}
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <MdOutlineAttachMoney />
+                </span>{" "}
+                <p>Costs</p>
+              </Link>
+              </li>
+              {/* 12 */}
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <MdOutlineAttachMoney />
+                </span>{" "}
+                <p>Margin</p>
+              </Link>
+              </li>
+              {/* 13 */}
+              <hr />
+
+              <p className="ana-para"> BUDGETING REPORTS </p>
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <AiOutlineDashboard />
+                </span>{" "}
+                <p>Real-time dashboard</p>
+              </Link>
+              </li>
+
+              
+              
 
 
               </ul>
 
 
               {/* end */}
-            </li>
-            <li className="dashboard">
-              <Link to="#" className="dash">
-                <span className="spanright">
-                  {" "}
-                  <GrPieChart />
-                </span>{" "}
-                <p>Reports </p>{" "}
-                <span className="spanleftgr">
-                  <BsChevronRight />
-                </span>
-              </Link>
             </li>
             <li className="dashboard">
               <Link to="#" className="dash">
@@ -134,6 +241,89 @@ export default function SideNavbar() {
                   <BsChevronRight />
                 </span>
               </Link>
+              {/* second drop down******************************  */}
+              <div className="computerdropdown">
+              <ul>
+
+              <p className="ana-para"> COMPUTER TIME REPORTS </p>
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <TbMicrophone2 />
+                </span>{" "}
+                <p>Away time</p>
+              </Link>
+              </li>
+
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <BiPointer />
+                </span>{" "}
+                <p>Activities</p>
+              </Link>
+              </li>
+
+
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <AiOutlineApartment />
+                </span>{" "}
+                <p>Categories</p>
+              </Link>
+              </li>
+
+
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <FaRegCalendarAlt />
+                </span>{" "}
+                <p>Timeline</p>
+              </Link>
+              </li>
+
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <TbRocket />
+                </span>{" "}
+                <p>Goals</p>
+              </Link>
+              </li>
+
+
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <RiSignalTowerLine />
+                </span>{" "}
+                <p>Efficiency</p>
+              </Link>
+              </li>
+
+              <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <AiOutlinePieChart />
+                </span>{" "}
+                <p>User statistics</p>
+              </Link>
+              </li>
+
+            
+
+
+
+
+              </ul>
+              </div> 
+              {/* end second drop down  */}
+
+
+
+
             </li>
           </ul>
         </div>
