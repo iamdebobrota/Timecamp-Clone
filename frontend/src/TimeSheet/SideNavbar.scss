@@ -5,82 +5,185 @@
     box-sizing:  border-box;
 }
 
-html, body{
-    height: 100%;
-    background: linear-gradient(to top right, #80cbc4, #e1bee7, #80ddea, #d1c4e9);
-}
+// html, body{
+//     height: 100%;
+//     background: linear-gradient(to top right, #80cbc4, #e1bee7, #80ddea, #d1c4e9);
+// }
 
-nav{
+.main-nav{
     width: 250px;
     position: absolute;
     top: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.1);
-     border-radius: 10px;
-     box-shadow:  5px, 7px, 10px, rgba(0, 0, 0, 0.5);
+    background: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    //  background-color: red;
 }
 
-nav ul{
-    position: relative;
-     list-style-type: none;
+.logo-image{
+    display: flex;
+    height: 60px;
+}
+.logoimg{
+    margin-left: 18px;
+}
+.closer{
+    
+    padding: 5px;
+   margin-top: 16px;
+   margin-left: 95px;
+   border-radius: 50%;
+   border: 0.5px solid grey;
+   height: 30px;
+   width: 30px;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+   position: sticky;
+
+
+   
+
 }
 
-nav ul li a{
-    display:  flex;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-    text-decoration: none;
-    text-transform: capitalize;
+.analize{
+    height: 150px;
+    // align-items: center;
+    
+    font-size: 1rem;
+    color: #393939;
+  
+}
+.dash{
+    
+ text-decoration: none;
+ text-align: center;
+//  font-size: 14px;
+color: #393939;
+display:  flex;
+align-items: center;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1rem;
+text-decoration: none;
+text-transform: capitalize; 
 
-    columns: #000;
-    padding: 10px 30px;
-    height: 50px;
-    transition: .5s ease;
-    border-radius:  0 30px;
+columns: #000;
+padding: 10px 10px;
+height: 35px;
+width: 217px;
+transition: .1s ease;
+border-radius:  10px;
+
+
+}
+.dashboard{
+    // margin-top: 15px; 
+    margin-left: 20px;
+    list-style: none;
+}
+.ana-para{
+    color: #8A8A8A;
+    font-size: 12px;
+    margin: auto;
+    height: 30.5px;
+    margin-left: 50px;
+    margin-top: 20px; 
+}
+.dash:hover{
+    background-color: #F1F1F1;
+    color: #393939;
+
+}
+.spanleft{
+    margin-left: 40px;
+}
+.spanleftgr{
+    margin-left: 95px;
+}
+.spanright{
+ padding-right: 10px;
+}
+.track{
+    height: 80px;
 }
 
-
-nav ul li a:hover{
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
+.manage{
+    height: 120px;
 }
 
-
-nav ul ul{
+.dropdown_tow{
     position: absolute;
-    left: 250px;
-    width: 200px;
-    top: 0;
-    display: none;
-    background: rgba(155, 39, 176, 0.4);
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+        left: 252px;
+        width: 269px;
+        top: 0;
+        // display: none;
+        background-color: #FFFFFF;
+        // border-radius: 5px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 }
 
-nav ul  span{
-    position: absolute;
-    right: 20px;
-    font-size: 1.5em;
-}
 
-nav ul .dropdown {
-    position: relative;
-}
 
-nav ul .dropdown:hover> ul{
-    display: initial;
-}
+// nav ul{
+//     position: relative;
+//      list-style-type: none;
+// }
 
-nav ul .dropdown_two ul{
-    position: absolute;
-    left: 200px;
-    top: 0;
-}
-nav ul .dropdown_two:hover ul {
-    display: initial;
-}
+// nav ul li a{
+//     display:  flex;
+//     align-items: center;
+//     font-family: Arial, Helvetica, sans-serif;
+//     font-size: 1.5rem;
+//     text-decoration: none;
+//     text-transform: capitalize;
 
-nav ul .split ul{
-    top: 100%;
-}
+//     columns: #000;
+//     padding: 10px 30px;
+//     height: 50px;
+//     transition: .5s ease;
+//     border-radius:  0 30px;
+// }
+
+
+// nav ul li a:hover{
+//     background: rgba(0, 0, 0, 0.7);
+//     color: #fff;
+// }
+
+////////////////////////////////////////////////
+// nav ul ul{
+//     position: absolute;
+//     left: 250px;
+//     width: 200px;
+//     top: 0;
+//     display: none;
+//     background: rgba(155, 39, 176, 0.4);
+//     border-radius: 5px;
+//     box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+// }
+//////////////////////////////////////////////////////////
+// nav ul  span{
+//     position: absolute;
+//     right: 20px;
+//     font-size: 1.5em;
+// }
+
+// nav ul .dropdown {
+//     position: relative;
+// }
+
+// nav ul .dropdown:hover> ul{
+//     display: initial;
+// }
+
+// nav ul .dropdown_two ul{
+//     position: absolute;
+//     left: 200px;
+//     top: 0;
+// }
+// nav ul .dropdown_two:hover ul {
+//     display: initial;
+// }
+
+// nav ul .split ul{
+//     top: 100%;
+// }

@@ -1,6 +1,6 @@
 import './App.css';
 import SideNavbar from './TimeSheet/SideNavbar';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
      
      <SideNavbar/>
      <br/>
-     <Footer/>
+     {/* <Footer/> */}
 
 
     </div>
