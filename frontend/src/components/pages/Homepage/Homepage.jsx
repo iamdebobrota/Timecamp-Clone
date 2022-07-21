@@ -174,6 +174,63 @@ const Logo = styled.img`
   height: 21px;
 `;
 
+const Green = styled.div`
+  background-color: #25cf60;
+  width: 100%;
+  padding-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+`;
+
+const Row = styled.div`
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  width: 75%;
+  margin: auto;
+`;
+
+const HeadingDiv = styled.div`
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  & h3 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: nunito sans, sans-serif;
+    text-align: center;
+  }
+`;
+
+const ImgDiv = styled.div`
+  text-align: center;
+  margin: 1rem 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+  // width:
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  &img {
+    vertical-align: middle;
+    border-style: none;
+  }
+`;
+
 export const Homepage = () => {
   return (
     <div>
@@ -214,6 +271,53 @@ export const Homepage = () => {
           </Right>
         </RowContainer>
       </Container>
+
+      <Green>
+        <Row>
+          <HeadingDiv>
+            <h3>
+              Trusted by 18,000 teams from all over the world (and still
+              growing!)
+            </h3>
+          </HeadingDiv>
+          <ImgDiv>
+            <img
+              src="https://cdn-m.timecamp.com/img/greenbranding/social-proof-section/usp-logo-white.png"
+              alt=""
+            />
+          </ImgDiv>
+          <ImgDiv>
+            <img
+              src="https://cdn-m.timecamp.com/img/greenbranding/social-proof-section/dsv-logo-white.png"
+              alt=""
+            />
+          </ImgDiv>
+          <ImgDiv>
+            <img
+              src="https://cdn-m.timecamp.com/img/greenbranding/social-proof-section/raindrop-logo-white.png"
+              alt=""
+            />
+          </ImgDiv>
+          <ImgDiv>
+            <img
+              src="https://cdn-m.timecamp.com/img/greenbranding/social-proof-section/saatchi-logo-white.png"
+              alt=""
+            />
+          </ImgDiv>
+          <ImgDiv>
+            <img
+              src="https://cdn-m.timecamp.com/img/greenbranding/social-proof-section/blitz-logo-white.png"
+              alt=""
+            />
+          </ImgDiv>
+          <ImgDiv>
+            <img
+              src="https://cdn-m.timecamp.com/img/greenbranding/social-proof-section/havas-logo-white.png"
+              alt=""
+            />
+          </ImgDiv>
+        </Row>
+      </Green>
     </div>
   );
 };
