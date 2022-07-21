@@ -31,7 +31,7 @@ const Signup = () => {
       .then((res) => {
         localStorage.setItem("userid", JSON.stringify(res._id));
         if (res.token) {
-          navigate("/notes");
+          navigate("/app/settings/users");
         } else {
           console.log("wrong credentials");
         }
