@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import {Link} from 'react-router-dom'
+
 
 const Outer = styled.div`
   position: -webkit-sticky;
@@ -67,13 +69,15 @@ export const Header = () => {
     <Outer>
       <Wrapper>
         <ImgDiv>
+        <Link to='/'>
           <img
             src="https://cdn-m.timecamp.com/img/greenbranding/colorLogo.svg"
             alt=""
           />
+          </Link>
         </ImgDiv>
         <Middle>
-          <P>Features</P>
+          <Link to="features">Features {" "}</Link>
           <P>Pricing</P>
           <P>Integrations</P>
           <P>Blog</P>
