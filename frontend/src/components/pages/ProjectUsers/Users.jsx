@@ -17,6 +17,42 @@ const Users = () => {
         </a>
       </div>
 
+      <div  className={styles.userHeaderWrapper} id="users-alert" role="alert">
+        <div className={styles.userHeaderWrapperFirst} >
+            <div>
+                <button className={styles.inviteBtn}>
+                    <i className="fa-solid fa-plus"></i>
+                    {"     "}<span>Invite people</span>
+                </button>
+            </div>
+
+            <div>
+                <button className={styles.createGrpBtn}>
+                  <span>Create group</span>
+                </button>
+            </div>
+
+            <div>
+                <button className={styles.mailBtn}>
+                    <i className="fa-regular fa-envelope"></i>
+                </button>
+            </div>
+
+            <div style={{padding: '0.5rem 0',fontSize:'14px' }}>
+                <span>1 / 100 Users</span>
+            </div>
+
+            <div style={{padding: '0.5rem 0',fontSize:'14px' }}>
+                <a style={{textDecoration:'underline',color:'#646efb'}}>Change number of seats</a>
+            </div>
+
+        </div>
+
+        <div className={styles.userHeaderWrapperSecond}>
+
+        </div>
+      </div>
+
 
       
     </div>
