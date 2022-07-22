@@ -8,11 +8,15 @@ const Users = () => {
   const navigate = useNavigate();
 
   const [user,setUser] = useState("")
+  const [newUserForm, setNewUserForm] = useState(false)
+  const [addUser,setAddUser] = useState({})
+  const [data,setData] = useState([]);
 
   const userid = JSON.parse(localStorage.getItem("userid"))
 
   useEffect(()=>{
     findUser(userid);
+    getUsers();
     if(!userid){
       navigate('/auth/login')
     }
@@ -26,8 +30,61 @@ const Users = () => {
       setUser(emailName)
   }
 
+
+  const addNewUsers=()=>{
+    setNewUserForm(!newUserForm)
+    console.log(newUserForm)
+  }
+  // useEffect(() => {
+  //   getNote();
+  //   if (!userid) {
+  //     navigate("/login");
+  //   }
+  // }, [userid]);
+
+  const getUsers = () => {
+    // e.preventDefault()
+    fetch(`https://timecampclone.herokuapp.com/user/${userid}/projectusers`)
+      .then((res) => res.json())
+      .then((res) => {
+        setData(res);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+    setAddUser({
+      ...addUser,
+      [name]: value,
+    });
+  };
+
+  console.log(data)
+
+  const handleAddUser = (e) => {
+    e.preventDefault();
+    let payload = JSON.stringify(addUser);
+    console.log('addUser: ', addUser);
+    fetch(`https://timecampclone.herokuapp.com/user/${userid}/projectusers`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: payload,
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log("res: ", res);
+        getUsers();
+      })
+      .catch((err) => console.log(err));
+  };
+
+
+
   return (
-    <div>
+    <div className={styles.parentUsersDiv} >
       <div>
 
       </div>
@@ -130,13 +187,13 @@ const Users = () => {
                     </div>
 
                       <div>
-                          <button className={styles.mailBtn}>
+                          <button  className={styles.mailBtn}>
                           <i className="fa-regular fa-pen-to-square"></i>
                           </button>
                       </div>
 
                       <div>
-                          <button className={styles.mailBtn}>
+                          <button onClick={addNewUsers} className={styles.mailBtn}>
                           <i className="fa-solid fa-plus"></i>
                           </button>
                       </div>
@@ -171,14 +228,14 @@ const Users = () => {
                     </div>
 
                       <div>
-                          <button className={styles.mailBtn}>
+                          <button  className={styles.mailBtn}>
                           <i className="fa-regular fa-pen-to-square"></i>
                           </button>
                       </div>
 
                       <div>
                           <button className={styles.mailBtn}>
-                          <i className="fa-solid fa-plus"></i>
+                          <i className="fa-regular fa-trash-can"></i>
                           </button>
                       </div>
                   </div>
@@ -188,8 +245,146 @@ const Users = () => {
                   </div>
 
               </div>
+              { newUserForm && 
+                <div className={styles.addNewUsersDiv}>
+                    <div className={styles.inviteUsersHeadingDiv}>
+                        <div className={styles.inviteName} >Invite Users</div>
+                        <div><i  style={{fontSize:'30px'}} className="fa-solid fa-xmark"></i></div>
+                    </div>
+                    <br />
+                    <hr />
+                    <br />
+                    <div style={{fontSize:'16px',fontWeight:'600'}}  >Each person's email address:</div>
+                    <div className={styles.inviteUsersHeadingDiv}>
+                      <span>Each person will receive an email with their login information and a link to your account</span>
+                      <span>{"    "}</span>
+                      <span>Guest</span>
+                    </div>
+
+                    <div style={{ marginTop:'10px'}} className="input-group mb-3">
+                      <span className="input-group-text">1</span>
+                      <input name="email" onChange={handleChange} type="text" className="form-control" aria-label="Amount (to the nearest dollar)" />
+                      <span className="input-group-text">
+                        <input type="checkbox" />
+                      </span>
+                    </div>
+
+                    <div style={{fontSize:'16px',fontWeight:'600'}}>Project assignment:</div>
+                    <div style={{marginTop:'5px'}}>
+                        <button className={styles.inviteBtn}>
+                            <span>Add project</span>
+                        </button>
+                    </div>
+                    <div style={{marginTop:'15px'}}>
+                      <input type="checkbox" />
+                      <span>{" "}</span>
+                      <span style={{marginLeft:'15px'}}>Add new users to all projects</span>
+                    </div>
+
+                    <div style={{fontSize:'16px',fontWeight:'600', marginTop:'15px'}}  >Which user group should they belong to?</div>
+                    <select defaultValue="people" className="form-select" aria-label="Default select example">
+                      <option>People</option>
+                    </select>
+                    <div style={{fontSize:'16px',fontWeight:'600', marginTop:'15px'}}  >Which superpowers, if any, should they have?</div>
+                    
+                    <div style={{marginTop:'15px'}}>
+                      <input type="checkbox" />
+                      <span>{" "}</span>
+                      <span style={{marginLeft:'15px'}}>Can manage all invoices, rates, projects (Time Tracking Administrator)</span>
+                    </div>
+                    <div style={{marginTop:'15px'}}>
+                      <input type="checkbox" />
+                      <span>{" "}</span>
+                      <span style={{marginLeft:'15px'}}>Can manage all invoices, rates</span>
+                    </div>
+                    <div style={{marginTop:'15px'}}>
+                      <input type="checkbox" />
+                      <span>{" "}</span>
+                      <span style={{marginLeft:'15px'}}>Can create new projects</span>
+                    </div>
+
+                    <div className={styles.inviteUsersHeadingDiv}>
+                        <div >Invite users by link</div>
+                        <div >Invite multiple users at once</div>
+                        <div>
+                            <button className={styles.createGrpBtn}>
+                              <span>Cancel</span>
+                            </button>
+                        </div>
+                        <div>
+                            <button onClick={handleAddUser} className={styles.inviteBtn}>
+                                <i className="fa-solid fa-plus"></i>
+                                {"     "}<span>Invite users</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+              }
+
+              {/* { data.map((el,index)=>{
+                return(
+                        <div  className={styles.userHeaderWrapperInUsersData} id="users-alert" role="alert">
+                              <div style={{marginLeft:'4.5rem'}}  className={styles.userHeaderWrapperFirstInUsersData} >
+                                    
+                                  <div style={{padding: '0.5rem 0',fontSize:'14px' }}>
+                                      <input type="checkbox" style={{marginRight: '1rem'}} />
+                                  </div>
+
+                                  <div>
+                                        <button style={{border:'none'}} className={styles.mailBtn}>
+                                          <i className="fa-regular fa-user"></i>
+                                        </button>
+                                    </div>
+
+                                  <div style={{padding: '0.5rem 0',fontSize:'14px' }}>
+                                      <span style={{fontWeight:'550'}}>{el.email}</span>
+                                  </div>
+
+                                    <div>
+                                        <button className={styles.mailBtn}>
+                                        <i className="fa-regular fa-pen-to-square"></i>
+                                        </button>
+                                    </div>
+
+                                    <div>
+                                        <button className={styles.mailBtn}>
+                                        <i className="fa-solid fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div className={styles.userHeaderWrapperSecond}>
+                                    {" "}
+                                </div>
+
+                         </div>
+                )
+              })
+              
+              
+              
+              } */}
 
           </div>
+      </div>
+      {/* usersData div ended */}
+
+      <div className={styles.bultEditMainDiv} >
+        <div className={styles.bulkEditFirst} >
+             <button className={styles.createGrpBtn}>
+                    <span>Bulk Edit</span>{"     "}
+                    <i className="fa-solid fa-angle-down"></i>
+              </button>
+
+              <button style={{marginLeft:'2rem'}} className={styles.inviteBtn}>
+                    <span >Apply</span>
+              </button>
+        </div>
+        <div className={styles.bulkEditSecond}>
+          <input type="checkbox" />{" "}
+          <span>Hide disabled users from lists in reports</span>
+        </div>
       </div>
       
     </div>

@@ -5,14 +5,14 @@ const UserModel = require("../models/UserModel");
 
 const usersRouter = Router();
 
-usersRouter.get("/:userId/users", async (req, res) => {
+usersRouter.get("/:userId/projectusers", async (req, res) => {
     const userId = req.params.userId;
     const users = await UserModel.find({userId: userId});
     res.send(users)
 })
 
 
-usersRouter.post("/:userId/users", async (req, res)=>{
+usersRouter.post("/:userId/projectusers", async (req, res)=>{
     const userId = req.params.userId;
     let  data = {
         ...req.body,
@@ -30,24 +30,24 @@ usersRouter.post("/:userId/users", async (req, res)=>{
     console.log("singleUser Added Successfully")
 })
 
-usersRouter.patch("/:userId/users/:_id", async(req,res, next)=>{
-    const singleUser = await UserModel.findByIdAndUpdate(req.params._id, req.body ,{
-        update : true 
-    } )
-    if(!singleUser){
-        return next(new ErrorResponse(`No singleUser with that id of ${req.params._id}`))
-    }
-    res.status(200).json({ success: true, data: singleUser })
-})
+// usersRouter.patch("/:userId/users/:_id", async(req,res, next)=>{
+//     const singleUser = await UserModel.findByIdAndUpdate(req.params._id, req.body ,{
+//         update : true 
+//     } )
+//     if(!singleUser){
+//         return next(new ErrorResponse(`No singleUser with that id of ${req.params._id}`))
+//     }
+//     res.status(200).json({ success: true, data: singleUser })
+// })
 
-usersRouter.delete("/:userId/users/:_id", async(req,res)=>{
-    let singleUser ;
-    try{
-        singleUser = await UserModel.findByIdAndDelete(req.params._id)
-    }catch(e){
-        console.log(e)
-    }
-    res.send(singleUser)
-})
+// usersRouter.delete("/:userId/users/:_id", async(req,res)=>{
+//     let singleUser ;
+//     try{
+//         singleUser = await UserModel.findByIdAndDelete(req.params._id)
+//     }catch(e){
+//         console.log(e)
+//     }
+//     res.send(singleUser)
+// })
 
 module.exports = usersRouter

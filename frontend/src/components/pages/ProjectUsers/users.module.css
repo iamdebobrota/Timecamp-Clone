@@ -1,3 +1,7 @@
+.parentUsersDiv{
+    position: relative;
+    z-index: 0;
+}
 .usersAlertDiv{
     display: flex;
     justify-content:space-around;
@@ -110,4 +114,31 @@
     justify-content: space-between; 
    
     margin-left:10px;
+}
+.bultEditMainDiv{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top:20px
+}
+.addNewUsersDiv{
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    width: 60%;
+    margin: -16rem 20%;
+    position:absolute;
+    z-index: 1;
+    padding: 1rem 2rem;
+    background-color:white;
+    box-shadow: 0 4px 10px 2px rgb(0 0 0 / 17%);
+}
+.inviteUsersHeadingDiv{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.inviteName{
+    font-size: 20px;
+    font-weight: bold;
 }

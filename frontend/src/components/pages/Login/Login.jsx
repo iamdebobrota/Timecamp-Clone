@@ -32,7 +32,7 @@ const Signup = () => {
       .then((res) => {
         localStorage.setItem("userid", JSON.stringify(res._id));
         if (res.token) {
-          navigate("/app/settings/users");
+          navigate("/users");
         } else {
           console.log("wrong credentials");
         }
