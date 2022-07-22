@@ -13,16 +13,46 @@
     display: flex;
     justify-content:space-around;
     margin: auto;
+    padding:1.2rem 0rem;
+    border-radius:5px;
+    background-color:#f8f8f8;
+    font-family: -apple-system,Arial,sans-serif;
+}
+
+.userHeaderWrapperBelow{
+    width: 90%;
+    display: flex;
+    justify-content:space-around;
+    margin: auto;
     padding:1.2rem 1rem;
     border-radius:10px;
-    background-color:#f8f8f8;
+    background-color: white;
     font-family: -apple-system,Arial,sans-serif;
 }
 .userHeaderWrapperFirst{
     display: flex;
     justify-content: space-between;
     gap: 15px;
-    font-size: 14px;
+    font-size: 12px;
+}
+.userHeaderWrapperFirst>div:hover{
+    cursor: pointer;
+}
+.userHeaderWrapperSecond{
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    font-size: 12px;
+}
+
+.userHeaderWrapperSecond>div:hover{
+    cursor: pointer;
+}
+.userHeaderWrapperThird{
+    font-size: 12px;
+}
+.userHeaderWrapperThird>div:hover{
+    cursor: pointer;
 }
 .inviteBtn{
     border: none;
@@ -49,4 +79,35 @@
     border-radius:5px;
     font-weight: bolder;
     font-size: 1.3rem;
+    cursor: pointer;
+}
+.usersDataDiv{
+    width: 90%;
+    border: 1px solid rgb(190, 187, 187);
+    margin: 0 auto;
+}
+.userHeaderWrapperInUsersData{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    margin: auto;
+    border-radius:2px;
+    font-family: -apple-system,Arial,sans-serif;
+    border-left: 2px solid transparent;
+    padding: 0.7rem 0;
+
+}
+.userHeaderWrapperInUsersData:hover{
+    border-left: 2px solid #4bb063;
+    background-color: #f8f8f8;
+}
+
+.userHeaderWrapperFirstInUsersData{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 12px;
+    justify-content: space-between; 
+   
+    margin-left:10px;
 }

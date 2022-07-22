@@ -34,7 +34,7 @@ const Signup = () => {
   return (
     <div className={styles.mainDiv}>
       <div className={styles.leftDivInMain}>
-        <h1 style={{ fontSize: "42px" }}>
+        <h1 style={{ fontSize: "42px",     fontWeight: '700' }}>
           Loved by customers and recognized among online communities.{" "}
         </h1>
         <div className="register-wrapper__img--review">

@@ -1,7 +1,16 @@
 import React from "react";
+import { useState } from "react";
 import styles from "../ProjectUsers/users.module.css"
 
 const Users = () => {
+
+  const [user,setUser] = useState("")
+
+  findUser();
+  const findUser =()=>{
+    
+  }
+
   return (
     <div>
       <div>
@@ -49,11 +58,124 @@ const Users = () => {
         </div>
 
         <div className={styles.userHeaderWrapperSecond}>
-
+        <input
+            name="password"
+            type="string"
+            className="form-control"
+            placeholder="Search users"
+          />
         </div>
       </div>
 
 
+      <div  className={styles.userHeaderWrapperBelow} id="users-alert" role="alert">
+        <div className={styles.userHeaderWrapperFirst} >
+            <div>
+            GROUPS/USERS {" "}
+            <span><i className="fa-solid fa-angle-down"></i></span>
+            </div>
+        </div>
+
+        <div className={styles.userHeaderWrapperSecond}>
+            <div>
+                EXPAND ALL  {" "}
+              <span><i className="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div>
+                EXTERNAL ID {" "}
+                <span><i className="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div>
+                INVOLVED IN {" "}
+                <span><i className="fa-solid fa-angle-down"></i></span>
+            </div>
+        </div>
+
+        <div className={styles.userHeaderWrapperThird} >
+            <div>
+                ROLE{" "}
+                <span><i className="fa-solid fa-angle-down"></i></span>
+            </div>    
+        </div>
+
+      </div>
+
+      <div className={styles.usersDataDiv}>
+          <div style={{width:'100%'}}>
+              <div className={styles.userHeaderWrapperInUsersData} id="users-alert" role="alert">
+                <div style={{marginLeft:'2rem'}} className={styles.userHeaderWrapperFirstInUsersData} >
+
+                    <div style={{padding: '0.5rem 0',fontSize:'14px' }}>
+                        <input type="checkbox" style={{marginRight: '1rem'}} />
+                    </div>
+
+
+                    <div style={{padding: '0.5rem 0',fontSize:'14px' }}>
+                        <span style={{fontWeight:'550'}}>People ( 1 user )</span>
+                    </div>
+
+                      <div>
+                          <button className={styles.mailBtn}>
+                          <i className="fa-regular fa-pen-to-square"></i>
+                          </button>
+                      </div>
+
+                      <div>
+                          <button className={styles.mailBtn}>
+                          <i className="fa-solid fa-plus"></i>
+                          </button>
+                      </div>
+                  </div>
+
+                  <div className={styles.userHeaderWrapperSecond}>
+                      {" "}
+                  </div>
+
+              </div>
+
+
+          </div>
+
+
+          <div>
+          <div  className={styles.userHeaderWrapperInUsersData} id="users-alert" role="alert">
+                <div style={{marginLeft:'4.5rem'}}  className={styles.userHeaderWrapperFirstInUsersData} >
+                      
+                    <div style={{padding: '0.5rem 0',fontSize:'14px' }}>
+                        <input type="checkbox" style={{marginRight: '1rem'}} />
+                    </div>
+
+                     <div>
+                          <button style={{border:'none'}} className={styles.mailBtn}>
+                            <i className="fa-regular fa-user"></i>
+                          </button>
+                      </div>
+
+                    <div style={{padding: '0.5rem 0',fontSize:'14px' }}>
+                        <span style={{fontWeight:'550'}}>{user}</span>
+                    </div>
+
+                      <div>
+                          <button className={styles.mailBtn}>
+                          <i className="fa-regular fa-pen-to-square"></i>
+                          </button>
+                      </div>
+
+                      <div>
+                          <button className={styles.mailBtn}>
+                          <i className="fa-solid fa-plus"></i>
+                          </button>
+                      </div>
+                  </div>
+
+                  <div className={styles.userHeaderWrapperSecond}>
+                      {" "}
+                  </div>
+
+              </div>
+
+          </div>
+      </div>
       
     </div>
   );
