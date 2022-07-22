@@ -87,6 +87,7 @@ const Para = styled.p`
   margin-top: 0;
   margin-bottom: 1rem;
 `;
+
 const Content = styled.div`
   margin-top: 10px;
   min-height: 240px;

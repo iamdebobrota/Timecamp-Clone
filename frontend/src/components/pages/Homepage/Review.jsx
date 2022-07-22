@@ -86,6 +86,7 @@ const Grey = styled.div`
 const GreyText = styled.div`
   width: 43%;
 `;
+
 const GreyLogo = styled.div`
   display: flex;
   flex-wrap: wrap;
