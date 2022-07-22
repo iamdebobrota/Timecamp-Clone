@@ -1,0 +1,26 @@
+.timesheet_main{
+    position: relative;
+    width:76% ;
+    /* border: 1px solid red; */
+right: 0;
+left: 300px;
+}
+.left_div{
+    display: flex;
+    border: 1px solid gray;
+    width: fit-content;
+    /* padding: 8px; */
+    border-radius: 10px;
+
+}
+.prev_btn{
+    font-size: 20px;
+    border-right: 1px solid gray;
+}
+.cal_btn{
+    font-size: 20px;
+    border-right: 1px solid gray;
+}
+.next_btn{
+    font-size: 20px;
+}

@@ -85,7 +85,7 @@ export const Header = () => {
         <Middle>
           <P>Book a Demo</P>
           <Spn></Spn>
-          <P>Sign In</P>
+          <Link to='sidenav'>Sign In</Link>
           <CustomP>Go to App</CustomP>
         </Middle>
       </Wrapper>
