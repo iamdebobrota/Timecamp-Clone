@@ -1,6 +1,8 @@
 import React from 'react'
 // import style from './features.module.css'
 import { AiFillGoogleCircle } from 'react-icons/ai';
+import Footer from '../Footer/Footer';
+import { Header } from '../Header/Header';
 
 
 
@@ -28,6 +30,7 @@ const logo=[
 const Features = () => {
   return (
     <div className=''>
+      <Header/>
     <div className='grid m-auto bg-slate-200 justify-center pt-8' >
          <div className='flex flex-1 w-3/4 m-auto mt-9 border' >
           <div className=' text-start '>
@@ -334,6 +337,7 @@ Time tracking integrations</p>
 </div>
 
 
+<Footer/>
     </div>
 
   )

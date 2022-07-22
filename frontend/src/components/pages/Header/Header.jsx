@@ -77,7 +77,7 @@ export const Header = () => {
           </Link>
         </ImgDiv>
         <Middle>
-          <Link to="features">Features {" "}</Link>
+          <Link to="/features">Features {" "}</Link>
           <P>Pricing</P>
           <P>Integrations</P>
           <P>Blog</P>
@@ -85,7 +85,7 @@ export const Header = () => {
         <Middle>
           <P>Book a Demo</P>
           <Spn></Spn>
-          <P>Sign In</P>
+          <Link to='/timesheet'>Sign In</Link>
           <CustomP>Go to App</CustomP>
         </Middle>
       </Wrapper>
