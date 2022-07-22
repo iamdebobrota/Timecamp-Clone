@@ -4,7 +4,7 @@ body{
     background-color: rgb(242, 242, 242);
 }
 .t_main{
-    margin-top: 10px;
+    margin-top: 80px;
     position: relative;
     width:76% ;
     z-index: -1s;
@@ -12,7 +12,7 @@ body{
 right: 0;
 left: 300px;
 top: 0;
-margin-top: 150px;
+/* margin-top: 150px; */
 }
 
 .timesheet_main{
@@ -193,6 +193,7 @@ margin-top: 5px;
 cursor: pointer;
 }
 .dropdown_main{
+    position: absolute;
     padding: 10px;
     border-radius: 8px;
     background-color: white;
@@ -205,3 +206,128 @@ cursor: pointer;
 .dropdown_main p{
     font-weight: 600;
 }
+.task_project{
+margin-top: 30px;
+box-shadow: rgba(52, 242, 0, 0.35) 2px 5px 15px;
+border: 1px solid green;
+padding: 20px;
+display: flex;
+gap: 20px;
+border-radius: 8px;
+justify-content: space-between;
+z-index: -1;
+}
+.task_project input{
+border-radius: 8px;
+background-color: transparent;
+padding-left: 8px;
+outline: none;
+}
+.task_project input:nth-child(1){
+    width: 40%;
+   
+}
+.task_project input:hover{
+    background-color: white;
+}
+.task_project input:focus{
+    background-color: white;
+}
+
+
+.task_project button{
+    display: flex;
+
+}
+.task_project button:nth-child(5){
+    background-color: rgba(0, 128, 0, 0.694);
+    color: white;
+    font-weight: 600;
+    padding: 9px;
+    border-radius: 8px;
+    letter-spacing: 3px;
+}
+.task_project button:nth-child(5):hover{
+    background-color: rgba(0, 128, 0, 0.757);
+}
+.task_project button:nth-child(4){
+    margin-top: 8px;
+    border-left: 1px solid grey;
+    padding-left: 10px;
+}
+.start_Logo{
+    margin-top: -1px;
+    font-size: 28px;
+    margin-left: 4px;
+}
+.addManu{
+    color: blue;
+    font-weight: 600;
+}
+.addManu:hover{
+    text-decoration: underline
+}
+.entri_Img{
+    height: 200px;
+    margin: auto;
+    margin-top: 80px;
+}
+.entri_Img + h1{
+font-size: 22px;
+font-weight: 600;
+text-align: center;
+}
+.entri_Img + h1 + p{
+    text-align: center;
+    font-weight: 500;
+    margin-top: 8px;
+    color: rgba(0, 0, 0, 0.595);
+}
+.plu_copy{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+}
+.plus, .copy{
+    border: 1px solid grey;
+    padding: 8px;
+    font-size: 35px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.plus:hover, .copy:hover{
+    background-color: rgba(128, 128, 128, 0.233);
+}
+.show_more{
+    border: 1px solid grey;
+    padding: 6px;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+   
+}
+.show_more:hover{
+    background-color: rgba(128, 128, 128, 0.233);
+}
+
+/* timer time */
+.timer{
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: center;
+}
+.timer_P{
+    /* border: 1px solid red; */
+    font-size: 14px;
+}
+.hr{
+    text-align: center;
+    width: 2px;
+    background-color: rgba(57, 57, 57, 0.582);
+    height: 12px;
+margin-left: 8px;
+    }
+

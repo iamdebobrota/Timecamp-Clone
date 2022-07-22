@@ -9,7 +9,8 @@ import { FiRefreshCcw, FiEdit } from 'react-icons/fi';
 import { FaRegUser } from 'react-icons/fa';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { AiOutlineSearch } from 'react-icons/ai';
-import { FaUserCircle } from 'react-icons/fa';
+import { FaUserCircle, FaRegCopy } from 'react-icons/fa';
+import { BsFillPlayFill, BsPlusLg } from 'react-icons/bs';
 
 // import Calendar from "react-calendar";
 // import "react-calendar/dist/Calendar.css";
@@ -53,6 +54,10 @@ const userClick=()=>{
   !user?
   setuser(true) : setuser(false)
 }
+
+
+
+let time= ["1 am", "2 am","3 am","4 am","5 am","6 am","7 am","8 am","9 am","10 am","11 am","12 pm","1 pm","2 pm","3 pm","4 pm","5 pm","6 pm","7 pm","8 pm","9 pm","10 pm","11 pm"]
 
 
   return (
@@ -141,6 +146,49 @@ const userClick=()=>{
 </div>
   ) : undefined
 }
+
+
+
+<div className={style.task_project}>
+<input type="text" placeholder='Select task and project'/>
+
+<input type="text" placeholder='note'/>
+<hr />
+<button className={style.addManu}>Add manually</button>
+
+<button>START TIMER 
+  <BsFillPlayFill className={style.start_Logo}/>
+</button>
+</div>
+
+{/* timer */}
+<div className={style.timer}>
+  {
+    time.map((t)=>(
+<>
+<p className={style.timer_P}>
+  
+{t}
+<hr className={style.hr}/>
+</p>
+</>
+    ))
+  }
+
+</div>
+
+
+<img className={style.entri_Img} src="https://cdn.timecamp.com/res/css/images/timesheet-classic-empty-state.svg" alt="" />
+<h1>No recent time entries </h1>
+  <p>Seems like you haven’t tracked any time yet</p>
+
+
+<div className={style.plu_copy}>
+<BsPlusLg className={style.plus} />
+<FaRegCopy  className={style.copy}/>
+
+<button className={style.show_more}>Show more days</button>
+</div>
 
 
     </div>

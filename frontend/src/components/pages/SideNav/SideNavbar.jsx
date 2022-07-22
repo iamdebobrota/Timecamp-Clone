@@ -17,7 +17,7 @@ import { BsChevronRight , BsTags, BsPeople, BsBarChart,BsZoomIn} from "react-ico
 import { VscFileSubmodule } from "react-icons/vsc";
 import { IoMdTime } from "react-icons/io";
 import { BiBorderAll , BiPointer} from "react-icons/bi";
-import { MdPeopleOutline , MdOutlineAttachMoney} from "react-icons/md";
+import { MdPeopleOutline,MdOutlineDone , MdOutlineAttachMoney} from "react-icons/md";
 import { GoListUnordered } from "react-icons/go";
 import { RiSignalTowerLine } from "react-icons/ri";
 import { TbRocket,TbMicrophone2 } from "react-icons/tb";
@@ -367,6 +367,14 @@ export default function SideNavbar() {
                   <BsPeople />
                 </span>{" "}
                 <p>Users </p>
+              </Link>
+            </li>
+            <li className="dashboard">
+              <Link to="#" className="dash">
+                <span className="spanright">
+                  <MdOutlineDone />
+                </span>{" "}
+                <p>Attandance </p>
               </Link>
             </li>
           </ul>
