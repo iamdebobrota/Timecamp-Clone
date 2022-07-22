@@ -7,11 +7,13 @@ import { AiOutlineDown } from 'react-icons/ai';
 import { AiOutlineUp } from 'react-icons/ai';
 import { FiRefreshCcw, FiEdit } from 'react-icons/fi';
 import { FaRegUser } from 'react-icons/fa';
-import { BsThreeDotsVertical } from 'react-icons/bs';
+import { BsThreeDotsVertical, BsFillStopFill } from 'react-icons/bs';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { FaUserCircle, FaRegCopy } from 'react-icons/fa';
 import { BsFillPlayFill, BsPlusLg } from 'react-icons/bs';
+import SetInterval_TitleChange from './SetInterval&TitleChange';
 
+import { getTimeInString, getTimeInStringWithoutHr } from "./getTimeInString";
 // import Calendar from "react-calendar";
 // import "react-calendar/dist/Calendar.css";
 // import "./style.css";
@@ -58,6 +60,44 @@ const userClick=()=>{
 
 
 let time= ["1 am", "2 am","3 am","4 am","5 am","6 am","7 am","8 am","9 am","10 am","11 am","12 pm","1 pm","2 pm","3 pm","4 pm","5 pm","6 pm","7 pm","8 pm","9 pm","10 pm","11 pm"]
+
+// TIMER APPY
+
+let initial=0;
+let end=200000;
+
+const [isRunning, setIsRunning] = React.useState(false);
+const [times, setTime] = React.useState(initial);
+const timer = React.useRef();
+const timeout = React.useRef();
+
+
+const startTimerInterval = () => {
+  if (isRunning) {
+    return null;
+  }
+  timer.current = setInterval(() => {
+    setTime((prev) => prev + 1);
+    setIsRunning(true);
+  }, 1000);
+  // document.title = getTimeInString(time);
+};
+if (isRunning && end == time) {
+  clearInterval(timer.current);
+}
+const stopTimer = () => {
+  clearInterval(timer.current);
+  clearTimeout()
+  setIsRunning(false);
+};
+
+// document.title = getTimeInString(time);
+React.useEffect(() => {
+  return () => stopTimer();
+}, []);
+
+
+console.log(times);
 
 
   return (
@@ -154,11 +194,34 @@ let time= ["1 am", "2 am","3 am","4 am","5 am","6 am","7 am","8 am","9 am","10 a
 
 <input type="text" placeholder='note'/>
 <hr />
-<button className={style.addManu}>Add manually</button>
 
-<button>START TIMER 
+<div className={style.timer_show}>
+{
+  isRunning?
+  // (getTimeInString(times))
+  (getTimeInStringWithoutHr(times))
+   : (
+<button className={style.addManu}>Add manually</button>)
+
+// {time}
+}
+</div>
+
+{/* <button>START TIMER 
   <BsFillPlayFill className={style.start_Logo}/>
-</button>
+</button> */}
+
+<button onClick={isRunning ? stopTimer : startTimerInterval} className={style.timer_btn}
+ style={isRunning ? {backgroundColor:"red"} : {backgroundColor:"green"}}
+>
+        {isRunning ? "STOP TIMER" : "START TIMER" }
+        {isRunning ? <BsFillStopFill  className={style.start_Logo} /> :  <BsFillPlayFill className={style.start_Logo} />  }
+
+       
+      </button>
+
+
+
 </div>
 
 {/* timer */}
@@ -189,6 +252,9 @@ let time= ["1 am", "2 am","3 am","4 am","5 am","6 am","7 am","8 am","9 am","10 a
 
 <button className={style.show_more}>Show more days</button>
 </div>
+
+
+{/* <SetInterval_TitleChange init={0} end={100}/> */}
 
 
     </div>

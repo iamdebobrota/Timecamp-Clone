@@ -239,21 +239,26 @@ outline: none;
     display: flex;
 
 }
-.task_project button:nth-child(5){
+.task_project .timer_btn{
     background-color: rgba(0, 128, 0, 0.694);
     color: white;
     font-weight: 600;
     padding: 9px;
     border-radius: 8px;
     letter-spacing: 3px;
+    width: 180px;
 }
 .task_project button:nth-child(5):hover{
     background-color: rgba(0, 128, 0, 0.757);
 }
 .task_project button:nth-child(4){
+   
+}
+.timer_show{
     margin-top: 8px;
     border-left: 1px solid grey;
     padding-left: 10px;
+    font-weight: 600;
 }
 .start_Logo{
     margin-top: -1px;
