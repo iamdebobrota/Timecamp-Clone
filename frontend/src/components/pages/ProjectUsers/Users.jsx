@@ -13,17 +13,21 @@ const Users = () => {
   const [data,setData] = useState([]);
 
   const userid = JSON.parse(localStorage.getItem("userid"))
+  // console.log(userid)
 
   useEffect(()=>{
-    findUser(userid);
+    findUser();
     getUsers();
     if(!userid){
       navigate('/auth/login')
     }
   },[userid])
+
+
   const findUser =()=>{
       const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'))
-      console.log(loggedInUser)
+      console.log('loggedInUser: ', loggedInUser);
+      // console.log(loggedInUser)
       let email = loggedInUser.email
       let emailName = email.split("@")
       emailName = emailName[0]
@@ -33,21 +37,14 @@ const Users = () => {
 
   const addNewUsers=()=>{
     setNewUserForm(!newUserForm)
-    console.log(newUserForm)
   }
-  // useEffect(() => {
-  //   getNote();
-  //   if (!userid) {
-  //     navigate("/login");
-  //   }
-  // }, [userid]);
 
   const getUsers = () => {
-    // e.preventDefault()
-    fetch(`https://timecampclone.herokuapp.com/user/${userid}/projectusers`)
+    fetch(`https://timecampclone.herokuapp.com/projectusers/${userid}/projectusers`)
       .then((res) => res.json())
       .then((res) => {
         setData(res);
+        console.log('res in getUsers: ', res);
       })
       .catch((err) => console.log(err));
   };
@@ -60,13 +57,13 @@ const Users = () => {
     });
   };
 
-  console.log(data)
+  // console.log('data',data)
 
   const handleAddUser = (e) => {
     e.preventDefault();
     let payload = JSON.stringify(addUser);
     console.log('addUser: ', addUser);
-    fetch(`https://timecampclone.herokuapp.com/user/${userid}/projectusers`, {
+    fetch(`https://timecampclone.herokuapp.com/projectusers/${userid}/projectusers`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -183,7 +180,7 @@ const Users = () => {
 
 
                     <div style={{padding: '0.5rem 0',fontSize:'14px' }}>
-                        <span style={{fontWeight:'550'}}>People ( 1 user )</span>
+                        <span style={{fontWeight:'550'}}>People ( {data.length+1} users )</span>
                     </div>
 
                       <div>
@@ -249,7 +246,7 @@ const Users = () => {
                 <div className={styles.addNewUsersDiv}>
                     <div className={styles.inviteUsersHeadingDiv}>
                         <div className={styles.inviteName} >Invite Users</div>
-                        <div><i  style={{fontSize:'30px'}} className="fa-solid fa-xmark"></i></div>
+                        <div style={{cursor: 'pointer'}}><i onClick={()=> setNewUserForm(!newUserForm)}  style={{fontSize:'30px'}} className="fa-solid fa-xmark"></i></div>
                     </div>
                     <br />
                     <hr />
@@ -307,7 +304,7 @@ const Users = () => {
                         <div >Invite users by link</div>
                         <div >Invite multiple users at once</div>
                         <div>
-                            <button className={styles.createGrpBtn}>
+                            <button onClick={()=> setNewUserForm(!newUserForm)} className={styles.createGrpBtn}>
                               <span>Cancel</span>
                             </button>
                         </div>
@@ -322,49 +319,49 @@ const Users = () => {
                 </div>
               }
 
-              {/* { data.map((el,index)=>{
+              { data.map((el,index)=>{
                 return(
-                        <div  className={styles.userHeaderWrapperInUsersData} id="users-alert" role="alert">
-                              <div style={{marginLeft:'4.5rem'}}  className={styles.userHeaderWrapperFirstInUsersData} >
-                                    
-                                  <div style={{padding: '0.5rem 0',fontSize:'14px' }}>
-                                      <input type="checkbox" style={{marginRight: '1rem'}} />
+                      <div key={index} className={styles.userHeaderWrapperInUsersData} id="users-alert" role="alert">
+                            <div style={{marginLeft:'4.5rem'}}  className={styles.userHeaderWrapperFirstInUsersData} >
+                                  
+                                <div style={{padding: '0.5rem 0',fontSize:'14px' }}>
+                                    <input type="checkbox" style={{marginRight: '1rem'}} />
+                                </div>
+
+                                <div>
+                                      <button style={{border:'none'}} className={styles.mailBtn}>
+                                        <i className="fa-regular fa-user"></i>
+                                      </button>
+                                  </div>
+
+                                <div style={{padding: '0.5rem 0',fontSize:'14px' }}>
+                                    <span style={{fontWeight:'550'}}>{el.email}</span>
+                                </div>
+
+                                  <div>
+                                      <button className={styles.mailBtn}>
+                                      <i className="fa-regular fa-pen-to-square"></i>
+                                      </button>
                                   </div>
 
                                   <div>
-                                        <button style={{border:'none'}} className={styles.mailBtn}>
-                                          <i className="fa-regular fa-user"></i>
-                                        </button>
-                                    </div>
-
-                                  <div style={{padding: '0.5rem 0',fontSize:'14px' }}>
-                                      <span style={{fontWeight:'550'}}>{el.email}</span>
+                                      <button className={styles.mailBtn}>
+                                      <i className="fa-regular fa-trash-can"></i>
+                                      </button>
                                   </div>
+                              </div>
 
-                                    <div>
-                                        <button className={styles.mailBtn}>
-                                        <i className="fa-regular fa-pen-to-square"></i>
-                                        </button>
-                                    </div>
+                              <div className={styles.userHeaderWrapperSecond}>
+                                  {" "}
+                              </div>
 
-                                    <div>
-                                        <button className={styles.mailBtn}>
-                                        <i className="fa-solid fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div className={styles.userHeaderWrapperSecond}>
-                                    {" "}
-                                </div>
-
-                         </div>
+                        </div>
                 )
               })
               
               
               
-              } */}
+              }
 
           </div>
       </div>
