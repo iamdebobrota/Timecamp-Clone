@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Fields } from "./Fields";
+import { Pricing } from "./Pricing";
 import { Review } from "./Review";
 
 const Container = styled.div`
@@ -387,6 +388,7 @@ export const Homepage = () => {
       </Demo>
       <Fields/>
       <Review/>
+      <Pricing/>
     </div>
   );
 };
