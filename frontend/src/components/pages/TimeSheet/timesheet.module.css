@@ -1,26 +1,59 @@
 .timesheet_main{
-    /* position: relative; */
+    margin-top: 40px;
+    position: relative;
     width:76% ;
+    z-index: -1s;
     /* border: 1px solid red; */
 right: 0;
 left: 300px;
 }
+.timesheet{
+    margin-top: 150px;
+}
 .left_div{
     display: flex;
-    border: 1px solid gray;
+    border: 1px solid rgba(128, 128, 128, 0.349);
     width: fit-content;
     /* padding: 8px; */
     border-radius: 10px;
-
+transform: scale(2);
+width: 62px;
+height: 22px;
 }
 .prev_btn{
+ 
     font-size: 20px;
-    border-right: 1px solid gray;
+    border-right: 0.5px solid rgba(128, 128, 128, 0.349);
+    padding: 2px;
+    cursor: pointer;
+}
+.cal_btn_1{
+    font-size: 20px;
+    padding: 2px;
+   cursor: pointer;
+   animation: 5s;
 }
 .cal_btn{
     font-size: 20px;
-    border-right: 1px solid gray;
+    padding: 2px;
+    border-right: 1px solid rgba(128, 128, 128, 0.349);
+    cursor: pointer;
+    animation: 5s;
+}
+.cal_btn, .cal_btn_1:focus{
+    color: green;
 }
 .next_btn{
     font-size: 20px;
+    padding: 2px;
+    cursor: pointer;
 }
+.date_year{
+    margin-top: -30px;
+    margin-left: 110px;
+    font-size: 25px;
+    font-weight: 500;
+    color: rgba(28, 28, 28, 0.726);
+}
+
+

@@ -23,6 +23,7 @@
 
  &:hover .dropdown_tow{
     display: block;
+    z-index: 100;
     }
     }
 
@@ -30,6 +31,7 @@
     #computer_t{
         &:hover .computerdropdown{
             display: block;
+            z-index: 100;
         }
     }
     }

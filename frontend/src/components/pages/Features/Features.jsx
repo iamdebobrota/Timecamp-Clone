@@ -61,7 +61,7 @@ const Features = () => {
          </div>
 
 <div className='bg-green-500 w-full p-6'>
-  <p className='mb-8 text-white font-semibold text-xl '>Trusted by 18,000 teams from all over the world (and still growing!)</p>
+  <p className='mb-8 text-white font-semibold text-xl text-center '>Trusted by 18,000 teams from all over the world (and still growing!)</p>
 <div className='flex gap-12 m-auto justify-center'>
   <img className='W-full' src="https://cdn-m.timecamp.com/img/greenbranding/social-proof-section/usp-logo-white.png" alt="" />
   <img className='W-full' src="https://cdn-m.timecamp.com/img/greenbranding/social-proof-section/dsv-logo-white.png" alt="" />
@@ -92,7 +92,7 @@ const Features = () => {
 
 </div>
 
-<h1 className='text-4xl font-bold mt-12'>One app. A multitude of benefits</h1>
+<h1 className='text-4xl font-bold mt-12 text-center'>One app. A multitude of benefits</h1>
 
 <div className='grid m-auto bg-white justify-center mt-8' >
          <div className='flex flex-1 w-3/4 m-auto mt-9 cursor-pointer' >
@@ -283,7 +283,7 @@ Time tracking integrations</p>
 
 
 <div className='mt-12 bg-gray-100 pt-4 pb-8 '>
-<h1  className='text-4xl font-bold mt-12 mb-20'>You might be interested in these blog posts</h1>
+<h1  className='text-4xl font-bold mt-12 mb-20 text-center'>You might be interested in these blog posts</h1>
 
 <div className='flex gap-8 m-auto justify-center'>
 <div class="flex justify-center">

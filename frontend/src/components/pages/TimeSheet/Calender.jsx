@@ -3,7 +3,9 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./style.css";
 
-export default function Form() {
+var val=[]
+
+function Form() {
   const [selectDate, setSelectDate] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
 
@@ -14,7 +16,11 @@ export default function Form() {
       dayOfDate = ("0" + date.getDate()).slice(-2),
       month = ("0" + (date.getMonth() + 1)).slice(-2);
     setSelectedDate([dayOfDate, month, date.getFullYear()].join("-"));
+  
   };
+
+
+ val.push(selectedDate)
   return (
     <>
       <div className="container_calender_main">
@@ -32,4 +38,8 @@ export default function Form() {
       </div>
     </>
   );
+ 
 }
+
+
+export {Form, val};
