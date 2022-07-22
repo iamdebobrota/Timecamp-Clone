@@ -52,7 +52,7 @@ const ImgDiv = styled.div`
     text-align: center;
   }
 `;
-const GP = styled.p`
+export const GP = styled.p`
   font-size: 14px;
   color: #25cf60;
   font-weight: 700;
@@ -60,6 +60,9 @@ const GP = styled.p`
   margin-bottom: 2rem;
   margin-top: 0;
   text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 `;
 const H2 = styled.h2`
   padding-right: 2rem !important;
@@ -161,7 +164,7 @@ const XYZ = styled.div`
   }
 `;
 
-const GreenBtn = styled.a`
+export const GreenBtn = styled.a`
   display: flex;
   margin-top: 2rem;
   width: fit-content;
@@ -171,7 +174,8 @@ const GreenBtn = styled.a`
   color: #fff;
   font-weight: 700;
   text-decoration: none;
-
+  align-items: center;
+  gap: 5px;
   :hover {
     background-color: #1da44c;
   }
