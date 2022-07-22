@@ -5,6 +5,7 @@ import styles from "./login.module.css";
 
 const Signup = () => {
   const [client, setClient] = useState({});
+  // const [loggedInUser, setLoggedInUser] = useState({});
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -18,7 +19,7 @@ const Signup = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     let payload = JSON.stringify(client);
-    console.log("payload: ", payload);
+    localStorage.setItem('loggedInUser',payload);
     // console.log("user",user)
     fetch("https://timecampclone.herokuapp.com/auth/login", {
       headers: {

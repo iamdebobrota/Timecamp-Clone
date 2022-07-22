@@ -1,14 +1,29 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import styles from "../ProjectUsers/users.module.css"
+import { useNavigate } from "react-router-dom";
 
 const Users = () => {
+  const navigate = useNavigate();
 
   const [user,setUser] = useState("")
 
-  findUser();
+  const userid = JSON.parse(localStorage.getItem("userid"))
+
+  useEffect(()=>{
+    findUser(userid);
+    if(!userid){
+      navigate('/auth/login')
+    }
+  },[userid])
   const findUser =()=>{
-    
+      const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'))
+      console.log(loggedInUser)
+      let email = loggedInUser.email
+      let emailName = email.split("@")
+      emailName = emailName[0]
+      setUser(emailName)
   }
 
   return (
