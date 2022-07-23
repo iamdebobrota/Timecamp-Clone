@@ -125,7 +125,7 @@ const Users = () => {
       
         You can now invite guests like clients, vendors, or contractors. You can
         add them free of charge. {" "}
-        <a className="track-click ng-scope">
+        <a href="/#" className="track-click ng-scope">
           <b style={{cursor: 'pointer', color:"#6393f8", marginLeft:'-40px'}} className="ng-binding">Invite guest</b>
         </a>
       </div>
@@ -156,7 +156,7 @@ const Users = () => {
             </div>
 
             <div style={{padding: '0.5rem 0',fontSize:'14px' }}>
-                <a style={{textDecoration:'underline',color:'#646efb'}}>Change number of seats</a>
+                <a href="/#" style={{textDecoration:'underline',color:'#646efb'}}>Change number of seats</a>
             </div>
 
         </div>

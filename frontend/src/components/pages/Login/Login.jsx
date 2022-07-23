@@ -55,13 +55,13 @@ const Login = () => {
         <div className={styles.reviewColumns}>
         
           <div className={styles.reviewColumnSingle}>   
-            <img src="https://cdn.timecamp.com/res/css/images/crozdesk-icon.1658395295.png" />          
+            <img alt="img" src="https://cdn.timecamp.com/res/css/images/crozdesk-icon.1658395295.png" />          
           </div>
           <div className={styles.reviewColumnSingle}>
-            <img src="https://cdn.timecamp.com/res/css/images/capterra-icon.1658395295.png" />
+            <img alt="img" src="https://cdn.timecamp.com/res/css/images/capterra-icon.1658395295.png" />
           </div>
           <div className={styles.reviewColumnSingle}>
-            <img src="https://cdn.timecamp.com/res/css/images/crowd-icon.1658395295.png" /> 
+            <img alt="img" src="https://cdn.timecamp.com/res/css/images/crowd-icon.1658395295.png" /> 
           </div>
         </div>
       </div>
