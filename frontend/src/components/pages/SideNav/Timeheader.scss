@@ -107,12 +107,15 @@
 .questionmarks {
     color: #666666;
     // position: fixed;
+    right: 100px;
+    
 
 }
 
-.questionmarks:hover {
+.questionmarks:hover .secondDropdown {
     color: green;
     position: fixed;
+    display: block;
 }
 
 .user {
@@ -128,14 +131,17 @@
 .setting {
     margin-right: 20px;
     color: #666666;
+    // position: absolute;
     // top: 50px;
     // position:absolute;
     // position: fixed;
 }
 
-.setting:hover {
+.setting:hover .firstdropdwon {
+    // color: red;// 
     // color: green;
     position: fixed;
+    display: block;
 }
 
 .right-icons {
@@ -159,6 +165,7 @@
     padding: 10px 0px 0px 10px;
     color: rgb(194, 193, 193);
     margin-left: 0px;
+    list-style: none;
 
 
     // border: none;
@@ -182,6 +189,7 @@
     color: #3E3E3E;
     margin: 10px 10px 10px 0px;
     padding: 8px 15px 8px 10px;
+    list-style: none;
 }
 .integration:hover {
     background-color: #F1F1F1;
@@ -207,6 +215,7 @@
     padding: 8px 15px 8px 10px;
     height: 39px;
     width: 200px;
+    list-style: none;
     
 }
 .bellowsetting:hover {
@@ -226,27 +235,50 @@
 .firstdropdwon {
 
     margin-top: 23px;
+
+   padding-left: -20px;
+
    padding-left: 20px;
+   margin-left: -60px;
+
     height: 147px;
     width: 238px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     border-radius: 10px;
     display: none;
+    list-style: none;
     // display: block;
 }
 
 .secondDropdown{
     margin-top: 23px;
+    // margin-right: 80px; 
+    margin-left: -100px;
    padding-left: 20px;
     height: 360px;
     width: 238px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     border-radius: 10px;
     display: none;
+    position: relative;
+    list-style: none;
     // display: block;
     
 
 }
+
+// .thirdDropdown{
+
+//     text-decoration: none;
+//     list-style-type: none;
+//     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+//     border-radius: 10px;
+//     height: 268px;
+//     width: 326px;
+//     // margin-right: 300px;
+    
+
+// }
 .support{
     display: flex;
     font-size: 25px;
