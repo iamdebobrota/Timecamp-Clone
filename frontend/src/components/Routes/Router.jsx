@@ -6,6 +6,10 @@ import { Route, Routes, Switch } from 'react-router-dom';
 import  { Homepage } from '../pages/HomePage/Homepage';
 import SideNavbar from '../pages/SideNav/SideNavbar';
 import Timesheet from '../pages/TimeSheet/Timesheet';
+import Dashboard from '../pages/Dashboard/Dashboard';
+import Userpage from '../pages/UserPage/Userpage';
+import ProjectPage from '../pages/Projectpage/ProjectPage';
+import Tags from '../pages/Projectpage/Tags';
 
 const Router = () => {
   return (
@@ -16,10 +20,16 @@ const Router = () => {
   <Route path='/' element={<Homepage/>} />
   <Route path='/features' element={<Features/>}/>
   {/* <Switch> */}
-  <Route exact path='/signin' >
+  <Route path='/app' element={<SideNavbar/>}>
     {/* <SideNavbar/> */}
   {/* <Timesheet/> */}
-{/* <Route path='/timesheet' element={<Timesheet/>} /> */}
+<Route path='' element={<Timesheet/>} />
+<Route path='deshboard' element={<Dashboard/>} />
+<Route path='users' element={<Userpage/>} />
+<Route path='projects' element={<ProjectPage/>} />
+<Route path='tags' element={<Tags/>} />
+ 
+ 
   </Route>
 
   {/* </Switch> */}

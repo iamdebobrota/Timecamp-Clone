@@ -1,0 +1,26 @@
+.project_main{
+    width: 76%;
+    margin-left: 300px;
+}
+.project{
+    margin-top: 130px;
+    margin-left: -20px;
+    border: 1px solid red;
+}
+
+
+
+
+
+
+
+/* Tags */
+
+.tags_main{
+    width: 76%;
+    margin-left: 300px;
+}
+.tags{
+    margin-top: 150px;
+    border: 1px solid red;
+}

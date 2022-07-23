@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import {Link} from 'react-router-dom'
-
+import {Link, Outlet} from 'react-router-dom'
+import style from '../Footer/footer.module.css'
 
 const Outer = styled.div`
   position: -webkit-sticky;
@@ -26,7 +26,7 @@ const CustomP = styled.p`
   background-color: #f7b801;
   align-items: center;
   cursor: pointer;
-
+margin-left: 12px;
   :hover {
     background-color: #dfa601;
   }
@@ -53,6 +53,7 @@ const Spn = styled.span`
   height: 80%;
   background-color: #25cf60;
   width: 1px;
+  margin-right:12px;
 `;
 const ImgDiv = styled.div`
   display: flex;
@@ -77,7 +78,7 @@ export const Header = () => {
           </Link>
         </ImgDiv>
         <Middle>
-          <Link to="/features">Features {" "}</Link>
+          <Link to="/features" className={style.hoverCom}>Features {" "}</Link>
           <P>Pricing</P>
           <P>Integrations</P>
           <P>Blog</P>
@@ -85,10 +86,15 @@ export const Header = () => {
         <Middle>
           <P>Book a Demo</P>
           <Spn></Spn>
-          <Link to='/signin'>Sign In</Link>
+          <Link to='/app' className={style.hoverCom}>Sign In</Link>
           <CustomP>Go to App</CustomP>
         </Middle>
       </Wrapper>
+
+
+      <Outlet/>
+
+
     </Outer>
   );
 };
