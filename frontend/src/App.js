@@ -12,14 +12,14 @@ function App() {
     <div className="App">
       
 
-      {/* <Router/> */}
+      <Router/>
 
   
 
 
 
-      <SideNavbar/>
-<Timesheet/>
+      {/* <SideNavbar/>
+<Timesheet/> */}
 {/* <Features/> */}
 {/* <Form/> */}
   </div>
