@@ -10,13 +10,14 @@
 
 
 .parentUsersDiv{
-    position: relative;
-    z-index: 0;
+    /* position: relative;
+    z-index: 0; */
+    margin: 10% 0% 0% 19%;
 }
 .usersAlertDiv{
     display: flex;
     justify-content:space-around;
-    width: 90%;
+    width: 100%;
     margin: auto;
     background-color:#d9e9fe;
     padding:1rem 1rem;
@@ -24,7 +25,7 @@
     color: #6393f8;
 }
 .userHeaderWrapper{
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content:space-around;
     margin: auto;
@@ -35,7 +36,7 @@
 }
 
 .userHeaderWrapperBelow{
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content:space-around;
     margin: auto;
@@ -97,7 +98,7 @@
     cursor: pointer;
 }
 .usersDataDiv{
-    width: 90%;
+    width: 100%;
     border: 1px solid rgb(190, 187, 187);
     margin: 0 auto;
 }
@@ -127,7 +128,7 @@
     margin-left:10px;
 }
 .bultEditMainDiv{
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -136,13 +137,14 @@
 .addNewUsersDiv{
     border: 1px solid whitesmoke;
     border-radius: 10px;
-    width: 60%;
-    margin: -16rem 20%;
+    width: 50%;
+    margin: -27rem 15%;
     position:absolute;
     z-index: 1;
     padding: 1rem 2rem;
     background-color:white;
     box-shadow: 0 4px 10px 2px rgb(0 0 0 / 17%);
+    text-align: left;
 }
 .inviteUsersHeadingDiv{
     display: flex;

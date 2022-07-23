@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import styles from "./user.module.css"
 import { useNavigate } from "react-router-dom";
+import TimeHeader from "../TimeHeader/TimeHeader";
 
 const Users = () => {
   const navigate = useNavigate();
@@ -18,10 +19,11 @@ const Users = () => {
   // console.log(userid)
 
   useEffect(()=>{
-    findUser();
-    getUsers();
     if(!userid){
       navigate('/auth/login')
+    }if(userid){
+      findUser();
+      getUsers();
     }
   },[userid])
 
@@ -114,10 +116,13 @@ const Users = () => {
   //     await fetch(`https://timecampclone.herokuapp.com/projectusers/${userid}/projectusers/${singleUserId}`, { method: 'DELETE' });
   // }
   return (
-    <div className={styles.parentUsersDiv} >
-      <div>
-
+    <>
+      <div style={{marginLeft:"21%"}} >
+          <TimeHeader heading={"Users"} />
       </div>
+    
+    <div className={styles.parentUsersDiv} >
+      
       <div  className={styles.usersAlertDiv} id="users-alert" role="alert">
       <i style={{fontSize:'26px', cursor: 'pointer'}} className="fa fa-user-plus" aria-hidden="true"></i>
       
@@ -418,6 +423,7 @@ const Users = () => {
       </div>
       
     </div>
+    </>
   );
 };
 
