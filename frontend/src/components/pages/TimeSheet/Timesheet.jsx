@@ -40,7 +40,7 @@ let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
     show===false ? setShow(true) : setShow(false)
   }
   let today=[]
-  for(let i=0;i<array.length-1;i++){
+  for(let i=0;i<array.length;i++){
     if(date===i){
       today.push(array[i]);
     }
@@ -51,6 +51,7 @@ let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
     }
   }
   
+// console.log(today);
 
 const userClick=()=>{
   !user?
@@ -97,7 +98,18 @@ React.useEffect(() => {
 }, []);
 
 
-console.log(times);
+
+
+const addmanually=()=>{
+  getTimeInString(10000)
+}
+
+
+// console.log(getTimeInString(times));
+
+
+
+
 
 
   return (
@@ -201,7 +213,7 @@ console.log(times);
   // (getTimeInString(times))
   (getTimeInStringWithoutHr(times))
    : (
-<button className={style.addManu}>Add manually</button>)
+<button className={style.addManu} onClick={()=>addmanually}>Add manually</button>)
 
 // {time}
 }
