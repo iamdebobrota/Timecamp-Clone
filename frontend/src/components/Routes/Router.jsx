@@ -1,45 +1,39 @@
 import React from 'react'
 import { Header } from '../pages/Header/Header'
 import Features from '../pages/Features/Features'
-import Footer from '../pages/Footer/Footer';
-import { Route,Routes } from "react-router-dom" ;
-
-import Home from '../pages/Home/Home';
+import Footer from '../pages/Footer/Footer'
+import { Route, Routes, Switch } from 'react-router-dom';
+import  { Homepage } from '../pages/HomePage/Homepage';
 import SideNavbar from '../pages/SideNav/SideNavbar';
 import Timesheet from '../pages/TimeSheet/Timesheet';
-import Dasboard from '../pages/Dasboard/Dasboard';
+import Dashboard from '../pages/Dashboard/Dashboard';
+import Userpage from '../pages/UserPage/Userpage';
 
 const Router = () => {
   return (
     <div>
 
-        
+        {/* <Header/> */}
 <Routes>
-  <Route path='/' element={<Home/>} />
+  <Route path='/' element={<Homepage/>} />
   <Route path='/features' element={<Features/>}/>
-
-
-
-  <Route path='/sidenav' element={<SideNavbar/>}>
-<Route path='timesheet' element={<Timesheet/>}/>
-
-<Route path='deshboard' element={<Dasboard/>}/>
-
-
+  {/* <Switch> */}
+  <Route path='/app' element={<SideNavbar/>}>
+    {/* <SideNavbar/> */}
+  {/* <Timesheet/> */}
+<Route path='' element={<Timesheet/>} />
+<Route path='deshboard' element={<Dashboard/>} />
+<Route path='users' element={<Userpage/>} />
+ 
+ 
   </Route>
+
+  {/* </Switch> */}
+
+
 </Routes>
         
-{/* <Footer/>  */}
-       
-{/* 
-<Switch>
-        <Route path="/" exact>
-          <Header />
-          <Home />
-          <Footer />
-        </Route>
-</Switch> */}
-
+        {/* <Footer/> */}
     </div>
 
   )

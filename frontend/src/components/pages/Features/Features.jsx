@@ -1,6 +1,8 @@
 import React from 'react'
 // import style from './features.module.css'
 import { AiFillGoogleCircle } from 'react-icons/ai';
+import Footer from '../Footer/Footer';
+import { Header } from '../Header/Header';
 
 
 
@@ -28,6 +30,7 @@ const logo=[
 const Features = () => {
   return (
     <div className=''>
+      <Header/>
     <div className='grid m-auto bg-slate-200 justify-center pt-8' >
          <div className='flex flex-1 w-3/4 m-auto mt-9 border' >
           <div className=' text-start '>
@@ -61,7 +64,7 @@ const Features = () => {
          </div>
 
 <div className='bg-green-500 w-full p-6'>
-  <p className='mb-8 text-white font-semibold text-xl text-center '>Trusted by 18,000 teams from all over the world (and still growing!)</p>
+  <p className='mb-8 text-white font-semibold text-xl '>Trusted by 18,000 teams from all over the world (and still growing!)</p>
 <div className='flex gap-12 m-auto justify-center'>
   <img className='W-full' src="https://cdn-m.timecamp.com/img/greenbranding/social-proof-section/usp-logo-white.png" alt="" />
   <img className='W-full' src="https://cdn-m.timecamp.com/img/greenbranding/social-proof-section/dsv-logo-white.png" alt="" />
@@ -92,7 +95,7 @@ const Features = () => {
 
 </div>
 
-<h1 className='text-4xl font-bold mt-12 text-center'>One app. A multitude of benefits</h1>
+<h1 className='text-4xl font-bold mt-12'>One app. A multitude of benefits</h1>
 
 <div className='grid m-auto bg-white justify-center mt-8' >
          <div className='flex flex-1 w-3/4 m-auto mt-9 cursor-pointer' >
@@ -267,8 +270,8 @@ Time tracking integrations</p>
   <img src="" alt="" /> */}
 
 <div className='grid grid-cols-3 gap-12 ' >
-{logo.map((item)=>(
-  <div className='shadow-2xl p-6 rounded-3xl bg-white'>
+{logo.map((item, ind)=>(
+  <div key={ind} className='shadow-2xl p-6 rounded-3xl bg-white'>
   <img src={item.img} alt="" className='h-full'/>
   </div>
 ))}
@@ -283,17 +286,17 @@ Time tracking integrations</p>
 
 
 <div className='mt-12 bg-gray-100 pt-4 pb-8 '>
-<h1  className='text-4xl font-bold mt-12 mb-20 text-center'>You might be interested in these blog posts</h1>
+<h1  className='text-4xl font-bold mt-12 mb-20'>You might be interested in these blog posts</h1>
 
 <div className='flex gap-8 m-auto justify-center'>
-<div class="flex justify-center">
-  <div class="rounded-lg shadow-lg bg-white max-w-sm w-80">
+<div className="flex justify-center">
+  <div className="rounded-lg shadow-lg bg-white max-w-sm w-80">
     <a href="https://www.timecamp.com/customer-stories/saatchi" data-mdb-ripple="true" data-mdb-ripple-color="light">
-      <img class="rounded-t-lg h-72" src="https://cdn-m.timecamp.com/img/customer-stories/saatchi/saatchi.jpg" alt=""/>
+      <img className="rounded-t-lg h-72" src="https://cdn-m.timecamp.com/img/customer-stories/saatchi/saatchi.jpg" alt=""/>
     </a>
-    <div class="p-6">
-      <h5 class="text-blue-500 text-base font-medium mb-2 text-start">M&C SAATCHI</h5>
-      <p class=" text-xl mb-4 font-bold text-start">
+    <div className="p-6">
+      <h5 className="text-blue-500 text-base font-medium mb-2 text-start">M&C SAATCHI</h5>
+      <p className=" text-xl mb-4 font-bold text-start">
         How to Blend in TimeCamp to an Already established Workflow. Some Insighta from M&S Saatchi
       </p>
     </div>
@@ -301,14 +304,14 @@ Time tracking integrations</p>
 </div>
 
 
-<div class="flex justify-center">
-  <div class="rounded-lg shadow-lg bg-white max-w-sm w-80">
+<div className="flex justify-center">
+  <div className="rounded-lg shadow-lg bg-white max-w-sm w-80">
     <a href="https://www.timecamp.com/customer-stories/tense/" data-mdb-ripple="true" data-mdb-ripple-color="light">
-      <img class="rounded-t-lg h-72" src="https://cdn-m.timecamp.com/img/customer-stories/tense/tensegroup.jpg" alt=""/>
+      <img className="rounded-t-lg h-72" src="https://cdn-m.timecamp.com/img/customer-stories/tense/tensegroup.jpg" alt=""/>
     </a>
-    <div class="p-6">
-      <h5 class="text-blue-500 text-base font-medium mb-2 text-start">GRUPA TENSE</h5>
-      <p class=" text-xl mb-4 font-bold text-start">
+    <div className="p-6">
+      <h5 className="text-blue-500 text-base font-medium mb-2 text-start">GRUPA TENSE</h5>
+      <p className=" text-xl mb-4 font-bold text-start">
         How TimeCamp helped a thriving digital agency by auomating its workflow.
       </p>
     </div>
@@ -316,14 +319,14 @@ Time tracking integrations</p>
 </div>
 
 
-<div class="flex justify-center">
-  <div class="rounded-lg shadow-lg bg-white max-w-sm w-80">
+<div className="flex justify-center">
+  <div className="rounded-lg shadow-lg bg-white max-w-sm w-80">
     <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-      <img class="rounded-t-lg h-72" src="https://cdn-m.timecamp.com/img/greenbranding/features/timeTracking.png" alt=""/>
+      <img className="rounded-t-lg h-72" src="https://cdn-m.timecamp.com/img/greenbranding/features/timeTracking.png" alt=""/>
     </a>
-    <div class="p-6">
-      <h5 class="text-blue-500 text-base font-medium mb-2 text-start uppercase">Time Tracking</h5>
-      <p class=" text-xl mb-4 font-bold text-start capitalize">
+    <div className="p-6">
+      <h5 className="text-blue-500 text-base font-medium mb-2 text-start uppercase">Time Tracking</h5>
+      <p className=" text-xl mb-4 font-bold text-start capitalize">
         why you should use time tracking for your bussiness
       </p>
     </div>
@@ -334,6 +337,7 @@ Time tracking integrations</p>
 </div>
 
 
+<Footer/>
     </div>
 
   )
