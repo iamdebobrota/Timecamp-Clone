@@ -38,14 +38,14 @@ const Signup = () => {
           Loved by customers and recognized among online communities.{" "}
         </h1>
         <div className="register-wrapper__img--review">
-          <img src="https://cdn.timecamp.com/res/css/images/review-icon-signup.1658227855.svg" />
+          <img alt="img" src="https://cdn.timecamp.com/res/css/images/review-icon-signup.1658227855.svg" />
         </div>
         <div className={styles.reviewColumns}>
           <div className={styles.reviewColumnSingle}>
             <p className={styles.reviewColumnSinglePTag}>
               Counting every second is easy with TimeCamp.{" "}
             </p>
-            <img src="https://cdn.timecamp.com/res/css/images/stars-reviews-signup.1658227855.svg" />
+            <img alt="img" src="https://cdn.timecamp.com/res/css/images/stars-reviews-signup.1658227855.svg" />
             <p>
               <span>Emily, </span>Lead Software Engineer{" "}
             </p>
@@ -54,7 +54,7 @@ const Signup = () => {
             <p className={styles.reviewColumnSinglePTag}>
               Great tool to measure the time dedicated to tasks and projects.{" "}
             </p>
-            <img src="https://cdn.timecamp.com/res/css/images/stars-reviews-signup.1658227855.svg" />
+            <img alt="img" src="https://cdn.timecamp.com/res/css/images/stars-reviews-signup.1658227855.svg" />
             <p>
               <span>Enrique, </span>Director Operaciones at Consultor{" "}
             </p>
@@ -63,7 +63,7 @@ const Signup = () => {
             <p className={styles.reviewColumnSinglePTag}>
               It has removed all our worries about tracking time and activities.{" "}
             </p>
-            <img src="https://cdn.timecamp.com/res/css/images/stars-reviews-signup.1658227855.svg" />
+            <img alt="img" src="https://cdn.timecamp.com/res/css/images/stars-reviews-signup.1658227855.svg" />
             <p>
               <span>Sarah, </span>Practice Lead at Cloud &amp; Emerging Tech{" "}
             </p>
@@ -71,8 +71,8 @@ const Signup = () => {
         </div>
 
         <div className={styles.imageIcons}>
-          <img src="https://cdn.timecamp.com/res/css/images/leader-summer-reviews-signup.1658227855.svg" />
-          <img src="https://cdn.timecamp.com/res/css/images/easiest-to-use-icon-review-signup.1658227855.svg" />
+          <img alt="img" src="https://cdn.timecamp.com/res/css/images/leader-summer-reviews-signup.1658227855.svg" />
+          <img alt="img" src="https://cdn.timecamp.com/res/css/images/easiest-to-use-icon-review-signup.1658227855.svg" />
         </div>
       </div>
       <div className={styles.rightDivInMain}>

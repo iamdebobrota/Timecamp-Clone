@@ -11,17 +11,19 @@ const Users = () => {
   const [newUserForm, setNewUserForm] = useState(false)
   const [addUser,setAddUser] = useState({})
   const [data,setData] = useState([]);
-  const [deleteUser,setDeleteUser] = useState("")
 
 
   const userid = JSON.parse(localStorage.getItem("userid"))
   // console.log(userid)
 
   useEffect(()=>{
-    findUser();
-    getUsers();
     if(!userid){
-      navigate('/auth/login')
+      alert("Sorry you are not Logged in, navigating to Login page")
+      navigate("/auth/login")
+    }
+    if(userid){
+      findUser();
+      getUsers();
     }
   },[userid])
 
@@ -82,7 +84,7 @@ const Users = () => {
 
   const handleDeleteUser=(el)=>{
     var singleUserId = el._id
-    setDeleteUser(singleUserId)
+
     fetch(`https://timecampclone.herokuapp.com/projectusers/${userid}/projectusers/${singleUserId}`,{
       method: 'DELETE'
     })

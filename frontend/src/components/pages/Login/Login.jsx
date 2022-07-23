@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./login.module.css";
 
-const Signup = () => {
+const Login = () => {
   const [client, setClient] = useState({});
   // const [loggedInUser, setLoggedInUser] = useState({});
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ const Signup = () => {
       .then((res) => {
         localStorage.setItem("userid", JSON.stringify(res._id));
         if (res.token) {
-          navigate("/users");
+          navigate("/projectusers");
         } else {
           console.log("wrong credentials");
         }
@@ -130,4 +130,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;
