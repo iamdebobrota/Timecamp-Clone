@@ -11,6 +11,8 @@ const Users = () => {
   const [newUserForm, setNewUserForm] = useState(false)
   const [addUser,setAddUser] = useState({})
   const [data,setData] = useState([]);
+  const [deleteUser,setDeleteUser] = useState("")
+
 
   const userid = JSON.parse(localStorage.getItem("userid"))
   // console.log(userid)
@@ -78,10 +80,39 @@ const Users = () => {
       .catch((err) => console.log(err));
   };
 
-  const handleDeleteUser=()=>{
-    
+  const handleDeleteUser=(el)=>{
+    var singleUserId = el._id
+    setDeleteUser(singleUserId)
+    fetch(`https://timecampclone.herokuapp.com/projectusers/${userid}/projectusers/${singleUserId}`,{
+      method: 'DELETE'
+    })
+      .then(async response => {
+        const data = await response.json();
+        console.log('data in .then async resp: ', data);
+        // check for error response
+        if (!response.ok) {
+            // get error message from body or default to response status
+            const error = (data && data.message) || response.status;
+            return Promise.reject(error);
+        }
+        }).then((res)=> {
+          console.log(res);
+          getUsers()
+        })
+      .catch((err) => console.log(err));
   }
 
+  // useEffect(() => {
+  //   // DELETE request using fetch with async/await
+  //   handleDeleteUser()
+    
+  // }, [deleteUser]);
+  
+  // async function handleDeleteUser(el) {
+  //   let singleUserId = el._id
+  //   console.log("singleUserId",singleUserId)
+  //     await fetch(`https://timecampclone.herokuapp.com/projectusers/${userid}/projectusers/${singleUserId}`, { method: 'DELETE' });
+  // }
   return (
     <div className={styles.parentUsersDiv} >
       <div>
@@ -347,7 +378,7 @@ const Users = () => {
                                   </div>
 
                                   <div>
-                                      <button onClick={handleDeleteUser} className={styles.mailBtn}>
+                                      <button onClick={() => handleDeleteUser(el)} className={styles.mailBtn}>
                                       <i className="fa-regular fa-trash-can"></i>
                                       </button>
                                   </div>
