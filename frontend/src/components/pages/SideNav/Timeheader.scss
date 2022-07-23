@@ -175,9 +175,10 @@
 
 }
 
-.contact:hover {
-    height: 30px bottom;
-    border-radius: 100%;
+.contact:hover .thirdDropdown {
+   
+    display: block;
+    
 
 
 }
@@ -235,12 +236,12 @@
 .firstdropdwon {
 
     margin-top: 23px;
-<<<<<<< Updated upstream
+
    padding-left: -20px;
-=======
+
    padding-left: 20px;
    margin-left: -60px;
->>>>>>> Stashed changes
+
     height: 147px;
     width: 238px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -267,18 +268,19 @@
 
 }
 
-// .thirdDropdown{
-
-//     text-decoration: none;
-//     list-style-type: none;
-//     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-//     border-radius: 10px;
-//     height: 268px;
-//     width: 326px;
-//     // margin-right: 300px;
+.thirdDropdown{
+    margin-top: 20px;
+    text-decoration: none;
+    list-style-type: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 10px;
+    height: 268px;
+    width: 326px;
+    margin-left: -300px;
+    display: none;
     
 
-// }
+}
 .support{
     display: flex;
     font-size: 25px;
@@ -313,5 +315,28 @@
     margin-right: 150px;
     color: #3D3D3D;
     // color: rebeccapurple;
+}
+
+.emailcontact{
+    display: flex;
+    font-size: 25px;
+    // height: 59px;
+    // width: 296px;
+    padding: 15px 15px 15px 15px;
+    color: #3E3E3E;
+}
+.emailcontact:hover{
+    background-color: #b5b3b3;
+    border-radius: 10px;
+     height: 39px;
+    width: 216px;
+    padding: 15px 15px 15px 15px;
+    color: #3E3E3E;
+    
+}
+.empara{
+    font-size: 15px;
+    text-align: start;
+    margin-left: 15px;
 }
 

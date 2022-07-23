@@ -2,13 +2,16 @@ import React from 'react'
 
 import "./Timeheader.scss";
 import { Link } from 'react-router-dom';
-import { FaHourglassStart , FaBullhorn} from 'react-icons/fa';
+import { FaHourglassStart , FaBullhorn, FaDownload} from 'react-icons/fa';
 import { IoSettingsOutline , IoPersonCircle} from "react-icons/io5";
 import { BsQuestionCircle , BsChat, BsBook} from "react-icons/bs";
 import { FaRegUser } from "react-icons/fa";
 import { GoCreditCard,GoGift } from "react-icons/go";
 import { ImInfo } from "react-icons/im";
 import { BiHeart } from "react-icons/bi";
+import { VscGlobe } from "react-icons/vsc";
+import { AiOutlinePoweroff } from "react-icons/ai";
+
 
 
 
@@ -67,11 +70,15 @@ function TimeHeader() {
            </ul>
            <div className='plus'>+</div>
                 <li className="contact"><IoPersonCircle/>
-                    {/* <ul className='thirdDropdown'>
-                        <li>first</li>
-                        <li>second</li>
-                        <li>fourth</li>
-                    </ul> */}
+                    <ul className='thirdDropdown'>
+                        <li><Link className='emailcontact' to="#"><div><FaRegUser/></div> <div><p className='empara'>masaischool@gmail.com</p> <p  className='empara'>masaischool</p></div></Link></li>
+                        <hr />
+                        <li><Link className='emailcontact' to="#"><div><FaDownload/></div> <div><p className='empara'>Download App</p> </div></Link></li>
+                        <li><Link className='emailcontact' to="#"><div><VscGlobe/></div> <div><p className='empara'>Browser Plugin</p> </div></Link></li>
+                        <hr />
+                     
+                        <li><Link className='emailcontact' to="#"><div><AiOutlinePoweroff/></div> <div><p className='empara'>Logout</p> </div></Link></li>
+                    </ul>
                 
                 </li>
 
