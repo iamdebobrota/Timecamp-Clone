@@ -6,7 +6,7 @@ body{
 .t_main{
     margin-top: 80px;
     position: relative;
-    width:76% ;
+    width:72% ;
     z-index: -1s;
     /* border: 1px solid red; */
 right: 0;
@@ -117,10 +117,10 @@ border-bottom-left-radius: 6px;
 }
 .refresh{
     border: 1px solid grey;
-    padding: 6px;
-    font-size: 36px;
+    padding: 8px;
+    font-size: 30px;
     border-radius: 8px;
-  width: 50px;
+  width: 40px;
   height: 38px;
   color: grey;
   display: flex;
@@ -132,11 +132,20 @@ border-bottom-left-radius: 6px;
 }
 
 .user_logo{
-margin-top: -5px;
+    margin-top: 1px;
+
 }
 .user{
-    /* color: green;
-    border: 1px solid green; */
+    border: 1px solid grey;
+    padding: 2px;
+    font-size: 30px;
+    border-radius: 8px;
+  width: 40px;
+  height: 38px;
+  color: grey;
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
 }
 .bulkEdit{
     color: grey;
@@ -216,6 +225,9 @@ gap: 20px;
 border-radius: 8px;
 justify-content: space-between;
 z-index: -1;
+/* width: 110%; */
+margin-left: -30px;
+/* height: 80px; */
 }
 .task_project input{
 border-radius: 8px;
@@ -224,7 +236,7 @@ padding-left: 8px;
 outline: none;
 }
 .task_project input:nth-child(1){
-    width: 40%;
+    width: 30%;
    
 }
 .task_project input:hover{
@@ -336,3 +348,102 @@ text-align: center;
 margin-left: 8px;
     }
 
+
+
+    /* Tomer tab */
+    .timer_tab{
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        margin-top: -5px;
+        background-color: rgb(255, 255, 255);
+        padding: 12px;
+        border-radius: 8px;
+        justify-content: space-between;
+    }
+.dis_flex{
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+    color: gray;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+.dis_flex:hover{
+    color: black;
+}
+.dflex{
+    margin-top: 10px;
+        display: flex;
+        gap: 10px;
+}
+.input{
+    background-color: transparent;
+    height: 40px;
+    width: 150px;
+    padding-left: 8px;
+    border-radius: 8px;
+    margin-top: 8px;
+    
+}
+.input:hover{
+    border: 1px solid rgba(128, 128, 128, 0.143);
+    background-color: rgba(128, 128, 128, 0.037);
+}
+.task{
+    font-size: 16px;
+    font-weight: 600;
+}
+.ftasak{
+    font-size: 15px;
+    margin-top: -3px;
+}
+.pause_play{
+    background-color: transparent;
+    /* padding-right: 7px; */
+    border-radius: 8px;
+    height: 38px;
+    margin-top: 10px;
+    padding: 4px;
+    transition: 1ms;
+    visibility: hidden;
+}
+.pause_play:hover{
+    padding-right: 6px;
+    color: white;
+    background-color: green;
+}
+.icons_hover{
+    visibility: hidden;
+}
+.timer_tab:hover .pause_play{
+    visibility:visible;
+}
+.timer_tab:hover .icons_hover{
+    visibility:visible;
+}
+.hide_inp{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 200px;
+    width: 250px;
+padding: 12px;
+border-radius: 8px;
+position: absolute;
+}
+.hide_inp input{
+    outline: none;
+    background-color: rgba(128, 128, 128, 0.096);
+    border-radius: 8px;
+    padding-left: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.367);
+}
+.hide_inp p:nth-child(2){
+    font-weight: 600;
+    margin-top: 5px;
+}
+.hide_inp li{
+    margin-left: 8px;
+    /* list-style: circle; */
+}
