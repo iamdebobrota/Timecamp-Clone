@@ -1,5 +1,6 @@
 import './App.css';
 import SideNavbar from './components/pages/SideNav/SideNavbar';
+import Users from './components/pages/UserPage/Users';
 import Router from './components/Routes/Router';
 function App() {
   return (
@@ -7,6 +8,8 @@ function App() {
       <Router/>
 
       {/* <SideNavbar/> */}
+
+      {/* <Users/> */}
   </div>
   );
 }
