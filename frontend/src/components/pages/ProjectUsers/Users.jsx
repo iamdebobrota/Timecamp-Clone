@@ -78,7 +78,9 @@ const Users = () => {
       .catch((err) => console.log(err));
   };
 
-
+  const handleDeleteUser=()=>{
+    
+  }
 
   return (
     <div className={styles.parentUsersDiv} >
@@ -345,7 +347,7 @@ const Users = () => {
                                   </div>
 
                                   <div>
-                                      <button className={styles.mailBtn}>
+                                      <button onClick={handleDeleteUser} className={styles.mailBtn}>
                                       <i className="fa-regular fa-trash-can"></i>
                                       </button>
                                   </div>

@@ -40,14 +40,14 @@ usersRouter.post("/:userId/projectusers", async (req, res)=>{
 //     res.status(200).json({ success: true, data: singleUser })
 // })
 
-// usersRouter.delete("/:userId/users/:_id", async(req,res)=>{
-//     let singleUser ;
-//     try{
-//         singleUser = await UserModel.findByIdAndDelete(req.params._id)
-//     }catch(e){
-//         console.log(e)
-//     }
-//     res.send(singleUser)
-// })
+usersRouter.delete("/:userId/projectusers/:_id", async(req,res)=>{
+    let singleUser ;
+    try{
+        singleUser = await UserModel.findByIdAndDelete(req.params._id)
+    }catch(e){
+        console.log(e)
+    }
+    res.send(singleUser)
+})
 
 module.exports = usersRouter
