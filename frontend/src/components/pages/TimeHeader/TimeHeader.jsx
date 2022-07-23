@@ -16,7 +16,11 @@ import { AiOutlinePoweroff } from "react-icons/ai";
 
 
 
-function TimeHeader() {
+function TimeHeader(props) {
+
+    const heading = props.heading
+
+    console.log(heading);
   return (
     <div className='main_header'>
         <header className='header' >
@@ -37,7 +41,7 @@ function TimeHeader() {
         <hr />
 
         <div className="secondheader">
-           <p className='btime'>Timesheet</p>
+           <p className='btime'>{heading}</p>
            <ul className='right-icons'>
                 <li className="setting"><IoSettingsOutline/>
                 {/* dropdown start */}

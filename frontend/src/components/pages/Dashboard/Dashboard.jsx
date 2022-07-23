@@ -1,10 +1,19 @@
 import React from "react";
 import { FaApple, FaDownload, FaUbuntu, FaWindows } from "react-icons/fa";
 import styled from "styled-components";
+import TimeHeader from "../TimeHeader/TimeHeader";
 
+
+
+const Wrap = styled.div`
+
+  margin-left:300px;
+
+`
 const Wrapper = styled.div`
-  width: 76%;
-  margin-left:280px;
+  width: 80%;
+  margin-left:0px;
+  margin-top: 80px;
   text-align: left;
   padding: 0 7%;
   display: flex;
@@ -88,6 +97,8 @@ const OSD = styled.div`
 
  const Dashboard = () => {
   return (
+    <Wrap>
+      <TimeHeader heading={'Dashboard'}/>
     <Wrapper>
       <Left>
         <h3>TimeCamp - Desktop Application</h3>
@@ -144,6 +155,7 @@ const OSD = styled.div`
         </OSD>
       </Right>
     </Wrapper>
+    </Wrap>
   );
 };
 

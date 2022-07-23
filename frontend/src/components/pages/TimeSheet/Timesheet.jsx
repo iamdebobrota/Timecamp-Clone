@@ -157,7 +157,7 @@ const handleDelete=()=>{
 
   return (
     <div className={style.t_main} >
-<TimeHeader/>
+<TimeHeader  heading={'Timesheet'}/>
 
 
     <div className={style.timesheet_main}>

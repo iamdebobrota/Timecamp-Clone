@@ -1,11 +1,9 @@
 .main_header{
-    width: 85%;
+    width: 83%;
     position: fixed;
     top: 0;
-    // left: 0;
     margin: auto;
-z-index: 1;
-    // border: 1px solid red;
+    z-index: 1;
     margin-left: -50px;
     padding-left: 20px;
 }
@@ -100,6 +98,7 @@ padding-left: 20px;
     text-align: left;
     padding-top: 15px;
     padding-right: 80px;
+    font-weight: 600;
 }
 
 .plus {

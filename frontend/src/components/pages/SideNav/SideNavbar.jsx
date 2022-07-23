@@ -73,7 +73,7 @@ export default function SideNavbar() {
               </Link> 
             </li>
             <li className="dashboard" id="clickhere">
-              <Link to="/report" className="dash">
+              <Link to="#" className="dash">
                 <span className="spanright">
                   {" "}
                   <GrPieChart />
@@ -333,7 +333,7 @@ export default function SideNavbar() {
           <p className="ana-para">MANAGE</p>
           <ul>
             <li className="dashboard">
-              <Link to="/projects" className="dash">
+              <Link to="/app/projects" className="dash">
                 <span className="spanright">
                   <VscFileSubmodule />
                 </span>{" "}
@@ -342,7 +342,7 @@ export default function SideNavbar() {
             </li>
 
             <li className="dashboard">
-              <Link to="/tags" className="dash">
+              <Link to="/app/tags" className="dash">
                 <span className="spanright">
                   <BsTags />
                 </span>{" "}
@@ -370,7 +370,7 @@ export default function SideNavbar() {
               </Link>
             </li>
             <li className="dashboard">
-              <Link to="/attandance" className="dash">
+              <Link to="#" className="dash">
                 <span className="spanright">
                   <MdOutlineDone />
                 </span>{" "}
