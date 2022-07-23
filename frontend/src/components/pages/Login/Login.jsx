@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Header } from "../Header/Header";
 import styles from "./login.module.css";
 
-const Signup = () => {
+const Login = () => {
   const [client, setClient] = useState({});
   // const [loggedInUser, setLoggedInUser] = useState({});
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ const Signup = () => {
       .then((res) => {
         localStorage.setItem("userid", JSON.stringify(res._id));
         if (res.token) {
-          navigate("/users");
+          navigate("/app");
         } else {
           console.log("wrong credentials");
         }
@@ -41,7 +42,9 @@ const Signup = () => {
   };
 
   return (
+     <><Header />
     <div className={styles.mainDiv}>
+      
       <div className={styles.leftDivInMain}>
         <h1 style={{ fontSize: "60px", fontWeight: "bold" }}>
         TimeCamp Plugin for Google Chrome
@@ -55,13 +58,13 @@ const Signup = () => {
         <div className={styles.reviewColumns}>
         
           <div className={styles.reviewColumnSingle}>   
-            <img src="https://cdn.timecamp.com/res/css/images/crozdesk-icon.1658395295.png" />          
+            <img alt="img" src="https://cdn.timecamp.com/res/css/images/crozdesk-icon.1658395295.png" />          
           </div>
           <div className={styles.reviewColumnSingle}>
-            <img src="https://cdn.timecamp.com/res/css/images/capterra-icon.1658395295.png" />
+            <img alt="img" src="https://cdn.timecamp.com/res/css/images/capterra-icon.1658395295.png" />
           </div>
           <div className={styles.reviewColumnSingle}>
-            <img src="https://cdn.timecamp.com/res/css/images/crowd-icon.1658395295.png" /> 
+            <img alt="img" src="https://cdn.timecamp.com/res/css/images/crowd-icon.1658395295.png" /> 
           </div>
         </div>
       </div>
@@ -110,12 +113,12 @@ const Signup = () => {
 
         <div className="form-group__termsPrivacy col-sm-12">
           <p className={styles.needSignup}>
-            <a
+            <Link to="/auth/register"
               className={styles.signUpTerms}
               href="https://app.timecamp.com/page/terms"
             >
              No account? Sign Up {" "}
-            </a>
+            </Link>
             or {" "}
             <a
               className={styles.signUpTerms}
@@ -127,7 +130,8 @@ const Signup = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
-export default Signup;
+export default Login;

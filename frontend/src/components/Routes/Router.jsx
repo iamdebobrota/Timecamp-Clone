@@ -10,6 +10,8 @@ import Dashboard from '../pages/Dashboard/Dashboard';
 import Users from '../pages/UserPage/Userpage';
 import ProjectPage from '../pages/Projectpage/ProjectPage';
 import Tags from '../pages/Projectpage/Tags';
+import Signup from '../pages/Signup/Signup';
+import Login from '../pages/Login/Login';
 
 const Router = () => {
   return (
@@ -20,9 +22,12 @@ const Router = () => {
   <Route path='/' element={<Homepage/>} />
   <Route path='/features' element={<Features/>}/>
   {/* <Switch> */}
+  <Route path="/auth/register" element={<Signup />} />
+  <Route path="/auth/login" element={<Login />} />
   <Route path='/app' element={<SideNavbar/>}>
     {/* <SideNavbar/> */}
   {/* <Timesheet/> */}
+  
 <Route path='' element={<Timesheet/>} />
 <Route path='deshboard' element={<Dashboard/>} />
 <Route path='users' element={<Users/>} />

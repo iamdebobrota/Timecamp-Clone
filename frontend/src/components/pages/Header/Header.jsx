@@ -86,7 +86,7 @@ export const Header = () => {
         <Middle>
           <P>Book a Demo</P>
           <Spn></Spn>
-          <Link to='/app' className={style.hoverCom}>Sign In</Link>
+          <Link to='/auth/login' className={style.hoverCom}>Sign In</Link>
           <CustomP>Go to App</CustomP>
         </Middle>
       </Wrapper>
