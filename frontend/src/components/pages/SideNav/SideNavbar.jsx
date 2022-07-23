@@ -17,7 +17,7 @@ import { BsChevronRight , BsTags, BsPeople, BsBarChart,BsZoomIn} from "react-ico
 import { VscFileSubmodule } from "react-icons/vsc";
 import { IoMdTime } from "react-icons/io";
 import { BiBorderAll , BiPointer} from "react-icons/bi";
-import { MdPeopleOutline , MdOutlineAttachMoney} from "react-icons/md";
+import { MdPeopleOutline,MdOutlineDone , MdOutlineAttachMoney} from "react-icons/md";
 import { GoListUnordered } from "react-icons/go";
 import { RiSignalTowerLine } from "react-icons/ri";
 import { TbRocket,TbMicrophone2 } from "react-icons/tb";
@@ -48,7 +48,7 @@ export default function SideNavbar() {
         <p className="ana-para">TRACK</p>
           <ul>
             <li className="dashboard">
-              <Link to="#" className="dash">
+              <Link to="/timesheet" className="dash">
                 <span className="spanright">
                   <IoMdTime />
                 </span>{" "}
@@ -65,7 +65,7 @@ export default function SideNavbar() {
           <p className="ana-para">ANALYZE</p>
           <ul>
             <li className="dashboard">
-              <Link to="#" className="dash">
+              <Link to="/deshboard" className="dash">
                 <span className="spanright">
                   <AiOutlineDashboard />
                 </span>{" "}
@@ -73,7 +73,7 @@ export default function SideNavbar() {
               </Link> 
             </li>
             <li className="dashboard" id="clickhere">
-              <Link to="#" className="dash">
+              <Link to="/report" className="dash">
                 <span className="spanright">
                   {" "}
                   <GrPieChart />
@@ -333,7 +333,7 @@ export default function SideNavbar() {
           <p className="ana-para">MANAGE</p>
           <ul>
             <li className="dashboard">
-              <Link to="#" className="dash">
+              <Link to="/projects" className="dash">
                 <span className="spanright">
                   <VscFileSubmodule />
                 </span>{" "}
@@ -342,7 +342,7 @@ export default function SideNavbar() {
             </li>
 
             <li className="dashboard">
-              <Link to="#" className="dash">
+              <Link to="/tags" className="dash">
                 <span className="spanright">
                   <BsTags />
                 </span>{" "}
@@ -362,11 +362,19 @@ export default function SideNavbar() {
         <p className="ana-para">TEAM</p>
           <ul>
             <li className="dashboard">
-              <Link to="#" className="dash">
+              <Link to="/users" className="dash">
                 <span className="spanright">
                   <BsPeople />
                 </span>{" "}
                 <p>Users </p>
+              </Link>
+            </li>
+            <li className="dashboard">
+              <Link to="/attandance" className="dash">
+                <span className="spanright">
+                  <MdOutlineDone />
+                </span>{" "}
+                <p>Attandance </p>
               </Link>
             </li>
           </ul>
