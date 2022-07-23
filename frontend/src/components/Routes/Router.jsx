@@ -7,7 +7,7 @@ import  { Homepage } from '../pages/HomePage/Homepage';
 import SideNavbar from '../pages/SideNav/SideNavbar';
 import Timesheet from '../pages/TimeSheet/Timesheet';
 import Dashboard from '../pages/Dashboard/Dashboard';
-import Userpage from '../pages/UserPage/Userpage';
+import Users from '../pages/UserPage/Userpage';
 import ProjectPage from '../pages/Projectpage/ProjectPage';
 import Tags from '../pages/Projectpage/Tags';
 
@@ -25,7 +25,7 @@ const Router = () => {
   {/* <Timesheet/> */}
 <Route path='' element={<Timesheet/>} />
 <Route path='deshboard' element={<Dashboard/>} />
-<Route path='users' element={<Userpage/>} />
+<Route path='users' element={<Users/>} />
 <Route path='projects' element={<ProjectPage/>} />
 <Route path='tags' element={<Tags/>} />
  
