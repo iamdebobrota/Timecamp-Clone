@@ -82,3 +82,7 @@ color: gray;
     color: gray;
     cursor: pointer;
 }
+.hoverCom:hover{
+    color: rgb(228, 195, 4);
+}
+
