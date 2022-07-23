@@ -15,6 +15,7 @@ import { BsFillPlayFill, BsPlusLg, BsTags } from 'react-icons/bs';
 import SetInterval_TitleChange from './SetInterval&TitleChange';
 
 import { getTimeInString, getTimeInStringWithoutHr } from "./getTimeInString";
+import TimeHeader from '../TimeHeader/TimeHeader';
 // import Calendar from "react-calendar";
 // import "react-calendar/dist/Calendar.css";
 // import "./style.css";
@@ -156,6 +157,9 @@ const handleDelete=()=>{
 
   return (
     <div className={style.t_main} >
+<TimeHeader/>
+
+
     <div className={style.timesheet_main}>
 <div className={style.left}>
   <div className={style.cal}>
