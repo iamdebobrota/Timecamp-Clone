@@ -8,7 +8,7 @@ import React from "react";
 // } from "react-router-dom";
 
 import "./SideNavbar.scss";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { AiOutlineLeft, AiOutlineDashboard ,AiOutlinePieChart, AiOutlineApartment} from "react-icons/ai";
 import { FaRegCalendarAlt,  FaRegMoneyBillAlt } from "react-icons/fa";
 
@@ -48,7 +48,7 @@ export default function SideNavbar() {
         <p className="ana-para">TRACK</p>
           <ul>
             <li className="dashboard">
-              <Link to="/timesheet" className="dash">
+              <Link to="/app" className="dash">
                 <span className="spanright">
                   <IoMdTime />
                 </span>{" "}
@@ -65,7 +65,7 @@ export default function SideNavbar() {
           <p className="ana-para">ANALYZE</p>
           <ul>
             <li className="dashboard">
-              <Link to="/deshboard" className="dash">
+              <Link to="/app/deshboard" className="dash">
                 <span className="spanright">
                   <AiOutlineDashboard />
                 </span>{" "}
@@ -362,7 +362,7 @@ export default function SideNavbar() {
         <p className="ana-para">TEAM</p>
           <ul>
             <li className="dashboard">
-              <Link to="/users" className="dash">
+              <Link to="/app/users" className="dash">
                 <span className="spanright">
                   <BsPeople />
                 </span>{" "}
@@ -381,6 +381,10 @@ export default function SideNavbar() {
           
         </div>
       </nav>
+
+<Outlet/>
+
+
     </div>
   );
 }

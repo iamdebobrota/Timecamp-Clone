@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Link} from 'react-router-dom'
+import {Link, Outlet} from 'react-router-dom'
 
 
 const Outer = styled.div`
@@ -85,10 +85,15 @@ export const Header = () => {
         <Middle>
           <P>Book a Demo</P>
           <Spn></Spn>
-          <Link to='/signin'>Sign In</Link>
+          <Link to='/app'>Sign In</Link>
           <CustomP>Go to App</CustomP>
         </Middle>
       </Wrapper>
+
+
+      <Outlet/>
+
+
     </Outer>
   );
 };
