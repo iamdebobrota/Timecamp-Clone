@@ -11,14 +11,14 @@
 
 .main-nav {
     width: 250px;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     background: #FFFFFF;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     //  background-color: red;
-
-
+height: 100vh;
+z-index: 100;
     #clickhere{
 
  &:hover .dropdown_tow{
@@ -172,8 +172,6 @@
     left: 252px;
     width: 279px;
     top: 5px;
-    
-
     background-color: #FFFFFF;
     // border-radius: 5px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;

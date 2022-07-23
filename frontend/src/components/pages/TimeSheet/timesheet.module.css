@@ -1,0 +1,449 @@
+
+
+body{
+    background-color: rgb(242, 242, 242);
+}
+.t_main{
+    margin-top: 150px;
+    position: relative;
+    width:72% ;
+    z-index: -1s;
+    /* border: 1px solid red; */
+right: 0;
+left: 300px;
+top: 0;
+/* margin-top: 150px; */
+}
+
+.timesheet_main{
+    
+display: flex;
+justify-content: space-between;
+
+}
+
+.timesheet{
+}
+.left{
+    width: 300px;
+    /* border: 1px solid red; */
+}
+.left_div{
+    display: flex;
+    border: 0.3px solid rgba(128, 128, 128, 0.349);
+    width: fit-content;
+    /* padding: 8px; */
+    border-radius: 5px;
+transform: scale(2);
+width: 62px;
+height: 22px;
+}
+.prev_btn{
+ 
+    font-size: 20px;
+    border-right: 0.5px solid rgba(128, 128, 128, 0.349);
+    padding: 2px;
+    
+    cursor: pointer;
+}
+.cal_btn_1{
+    font-size: 20px;
+    padding: 2px;
+   cursor: pointer;
+   animation: 5s;
+}
+.cal_btn{
+    font-size: 20px;
+    padding: 2px;
+    border-right: 1px solid rgba(128, 128, 128, 0.349);
+    cursor: pointer;
+    animation: 5s;
+}
+.cal_btn, .cal_btn_1:focus{
+    /* color: green; */
+}
+.next_btn{
+    font-size: 20px;
+    padding: 2px;
+    cursor: pointer;
+}
+.date_year{
+    margin-top: -30px;
+    margin-left: 110px;
+    font-size: 21px;
+    font-weight: 500;
+    color: rgba(28, 28, 28, 0.726);
+}
+.cal{
+    /* margin-top: 200px; */
+}
+.right{
+    display: flex;
+    justify-content: space-around;
+    gap: 12px;
+    /* border: 1px solid red; */
+}
+.day_cal{
+    border: 1px solid gray;
+    display: flex;
+    /* gap: 12px; */
+    width: fit-content;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 17px;
+    color: grey;
+}
+.day_cal p:nth-child(1){
+    border-right: 1px solid grey;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 8px;
+border: 1px solid green;
+color: green;
+border-top-left-radius: 6px;
+border-bottom-left-radius: 6px;
+}
+.day_cal p:nth-child(1):hover{
+    background-color: rgba(128, 128, 128, 0.128);
+}
+.day_cal p:nth-child(2):hover{
+    background-color: rgba(128, 128, 128, 0.128);
+}
+.day_cal p:nth-child(2){
+    /* border-right: 1px solid grey; */
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.refresh{
+    border: 1px solid grey;
+    padding: 8px;
+    font-size: 30px;
+    border-radius: 8px;
+  width: 40px;
+  height: 38px;
+  color: grey;
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
+}
+.refresh:hover{
+    background-color: rgba(128, 128, 128, 0.125);
+}
+
+.user_logo{
+    margin-top: 1px;
+
+}
+.user{
+    border: 1px solid grey;
+    padding: 2px;
+    font-size: 30px;
+    border-radius: 8px;
+  width: 40px;
+  height: 38px;
+  color: grey;
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
+}
+.bulkEdit{
+    color: grey;
+    display: flex;
+    gap: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 4px;
+}
+.bulkEdit:hover{
+    background-color: rgba(128, 128, 128, 0.182);
+}
+.edit{
+    margin-top: 6px;
+}
+.edit1{
+    margin-top: 2px;
+}
+.menu{
+    border: 1px solid grey;
+    font-size: 37px;
+    border-radius: 6px;
+    padding: 7px;
+    color: grey;
+    cursor: pointer;
+}
+.menu:hover{
+    background-color: rgba(128, 128, 128, 0.216);
+}
+
+
+
+/* dropdown */
+.userDorpdown{
+    display: flex;
+    justify-content: space-between;
+}
+.userDorpdown input{
+   outline: none;
+   font-weight:600; 
+    background-color: rgba(128, 128, 128, 0.14);
+    border-radius: 8px;
+    padding-left: 6px;
+    height: 33px;
+    width: 300px;
+}
+.userDorpdown .AiOutlineSearch{
+color: grey;
+font-size: 26px;
+margin-left: -28px;
+margin-top: 5px;
+cursor: pointer;
+}
+.dropdown_main{
+    position: absolute;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: white;
+    /* position: relative; */
+    margin-top: 100px;
+    width: 300px;
+    margin-left: 700px;
+    margin-top: 5px;
+}
+.dropdown_main p{
+    font-weight: 600;
+}
+.task_project{
+margin-top: 30px;
+box-shadow: rgba(52, 242, 0, 0.35) 2px 5px 15px;
+border: 1px solid green;
+padding: 20px;
+display: flex;
+gap: 20px;
+border-radius: 8px;
+justify-content: space-between;
+z-index: -1;
+/* width: 110%; */
+margin-left: -30px;
+/* height: 80px; */
+}
+.task_project input{
+border-radius: 8px;
+background-color: transparent;
+padding-left: 8px;
+outline: none;
+}
+.task_project input:nth-child(1){
+    width: 30%;
+   
+}
+.task_project input:hover{
+    background-color: white;
+}
+.task_project input:focus{
+    background-color: white;
+}
+
+
+.task_project button{
+    display: flex;
+
+}
+.task_project .timer_btn{
+    background-color: rgba(0, 128, 0, 0.694);
+    color: white;
+    font-weight: 600;
+    padding: 9px;
+    border-radius: 8px;
+    letter-spacing: 3px;
+    width: 180px;
+}
+.task_project button:nth-child(5):hover{
+    background-color: rgba(0, 128, 0, 0.757);
+}
+.task_project button:nth-child(4){
+   
+}
+.timer_show{
+    margin-top: 8px;
+    border-left: 1px solid grey;
+    padding-left: 10px;
+    font-weight: 600;
+}
+.start_Logo{
+    margin-top: -1px;
+    font-size: 28px;
+    margin-left: 4px;
+}
+.addManu{
+    color: blue;
+    font-weight: 600;
+}
+.addManu:hover{
+    text-decoration: underline
+}
+.entri_Img{
+    height: 200px;
+    margin: auto;
+    margin-top: 80px;
+}
+.entri_Img + h1{
+font-size: 22px;
+font-weight: 600;
+text-align: center;
+}
+.entri_Img + h1 + p{
+    text-align: center;
+    font-weight: 500;
+    margin-top: 8px;
+    color: rgba(0, 0, 0, 0.595);
+}
+.plu_copy{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+}
+.plus, .copy{
+    border: 1px solid grey;
+    padding: 8px;
+    font-size: 35px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.plus:hover, .copy:hover{
+    background-color: rgba(128, 128, 128, 0.233);
+}
+.show_more{
+    border: 1px solid grey;
+    padding: 6px;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+   
+}
+.show_more:hover{
+    background-color: rgba(128, 128, 128, 0.233);
+}
+
+/* timer time */
+.timer{
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: center;
+}
+.timer_P{
+    /* border: 1px solid red; */
+    font-size: 14px;
+}
+.hr{
+    text-align: center;
+    width: 2px;
+    background-color: rgba(57, 57, 57, 0.582);
+    height: 12px;
+margin-left: 8px;
+    }
+
+
+
+    /* Tomer tab */
+    .timer_tab{
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        margin-top: -5px;
+        background-color: rgb(255, 255, 255);
+        padding: 12px;
+        border-radius: 8px;
+        justify-content: space-between;
+    }
+.dis_flex{
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+    color: gray;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+.dis_flex:hover{
+    color: black;
+}
+.dflex{
+    margin-top: 10px;
+        display: flex;
+        gap: 10px;
+}
+.input{
+    background-color: transparent;
+    height: 40px;
+    width: 150px;
+    padding-left: 8px;
+    border-radius: 8px;
+    margin-top: 8px;
+    
+}
+.input:hover{
+    border: 1px solid rgba(128, 128, 128, 0.143);
+    background-color: rgba(128, 128, 128, 0.037);
+}
+.task{
+    font-size: 16px;
+    font-weight: 600;
+}
+.ftasak{
+    font-size: 15px;
+    margin-top: -3px;
+}
+.pause_play{
+    background-color: transparent;
+    /* padding-right: 7px; */
+    border-radius: 8px;
+    height: 38px;
+    margin-top: 10px;
+    padding: 4px;
+    transition: 1ms;
+    visibility: hidden;
+}
+.pause_play:hover{
+    padding-right: 6px;
+    color: white;
+    background-color: green;
+}
+.icons_hover{
+    visibility: hidden;
+}
+.timer_tab:hover .pause_play{
+    visibility:visible;
+}
+.timer_tab:hover .icons_hover{
+    visibility:visible;
+}
+.hide_inp{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 200px;
+    width: 250px;
+padding: 12px;
+border-radius: 8px;
+position: absolute;
+}
+.hide_inp input{
+    outline: none;
+    background-color: rgba(128, 128, 128, 0.096);
+    border-radius: 8px;
+    padding-left: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.367);
+}
+.hide_inp p:nth-child(2){
+    font-weight: 600;
+    margin-top: 5px;
+}
+.hide_inp li{
+    margin-left: 8px;
+    /* list-style: circle; */
+}
