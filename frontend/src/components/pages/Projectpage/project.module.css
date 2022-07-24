@@ -1,19 +1,33 @@
 .project_main{
-    width: 76%;
+    /* width: 76%; */
     margin-left: 300px;
 }
 .project{
     margin-top: 130px;
     margin-left: -20px;
-    border: 1px solid red;
 }
 
 
 
-
-
-
-
+.intputtag{
+    padding: 8px;
+    outline: none;
+    background-color: transparent;
+    border-radius: 8px;
+}
+.intputtag:hover{
+    background-color: white;
+}
+.addtodobtn{
+    background-color: green;
+    color: white;
+    padding: 5px 10px 8px;
+   
+    border-radius: 8px;
+}
+.addtodobtn:hover{
+background-color: rgba(0, 128, 0, 0.536);
+}
 
 /* Tags */
 

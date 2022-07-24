@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import "./Timeheader.scss";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaHourglassStart , FaBullhorn, FaDownload} from 'react-icons/fa';
 import { IoSettingsOutline , IoPersonCircle} from "react-icons/io5";
 import { BsQuestionCircle , BsChat, BsBook} from "react-icons/bs";
@@ -11,14 +11,22 @@ import { ImInfo } from "react-icons/im";
 import { BiHeart } from "react-icons/bi";
 import { VscGlobe } from "react-icons/vsc";
 import { AiOutlinePoweroff } from "react-icons/ai";
+import { AuthContext } from '../../../AuthContext/authContext';
 
 
 
 
 
 function TimeHeader(props) {
-
+    const { isAuth, setIsAuth } = useContext(AuthContext);
     const heading = props.heading
+const navigate= useNavigate()
+
+const handlelogout=()=>{
+    setIsAuth(false)
+    navigate('/')
+}
+
 
     console.log(heading);
   return (
@@ -94,7 +102,13 @@ function TimeHeader(props) {
                         <li><Link className='emailcontact' to="#"><div><VscGlobe/></div> <div><p className='empara'>Browser Plugin</p> </div></Link></li>
                         <hr />
                      
-                        <li><Link className='emailcontact' to="#"><div><AiOutlinePoweroff/></div> <div><p className='empara'>Logout</p> </div></Link></li>
+                        <li onClick={()=>handlelogout}>
+                            <Link className='emailcontact' to="/">
+                                <div><AiOutlinePoweroff/></div>
+                                 <div>
+                            <p className='empara'>Logout</p> 
+                            
+                            </div></Link></li>
                     </ul>
                 
                 </li>
