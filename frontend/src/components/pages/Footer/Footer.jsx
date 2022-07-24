@@ -65,21 +65,21 @@ const Footer = () => {
     <div className={style.footer_main}>
         <div className={style.footer}>
           {footers.map((footer) => (
-            <div item xs={5} sm={2} key={footer.title}
+            <div xs={5} sm={2} key={footer.title}
             className={style.container_footer}>
               <div className={style.title}
               >
                 {footer.title}
               </div>
-              <p className={style.ul}>
-                {footer.description.map((item) => (
-                  <p key={item}>
+              <div className={style.ul}>
+                {footer.description.map((ite, ind) => (
+                  <div key={ind}>
                     <p>
-                      {item}
+                      {ite}
                     </p>
-                  </p>
+                  </div>
                 ))}
-              </p>
+              </div>
             </div>
           ))}
           </div>

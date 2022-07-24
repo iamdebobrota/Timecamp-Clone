@@ -195,7 +195,7 @@ const ProjectPage = () => {
 
           <div>
             <select name="" id="" placeholder="Filter">
-              <option hidden selected value>
+              <option hidden >
                 Filter
               </option>
               <option value="">All tasks</option>
