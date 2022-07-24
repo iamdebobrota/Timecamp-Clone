@@ -27,8 +27,12 @@ const handlelogout=()=>{
     navigate('/')
 }
 
+let lo=JSON.parse(localStorage.getItem('loggedInUser'))
+// console.log(lo.email);
 
-    console.log(heading);
+let name= lo.email.split('@')[0]
+console.log(name);
+
   return (
     <div className='main_header'>
         <header className='header' >
@@ -88,11 +92,11 @@ const handlelogout=()=>{
                         </div> 
                         <div>
                             <p className='empara'>
-                                masaischool@gmail.com
+                               {lo.email}
                                 </p>
 
                          <p  className='empara'>
-                            masaischool
+                            {name}
                             </p></div>
                             
                             </Link>

@@ -113,7 +113,7 @@ const Login = () => {
           <div className={styles.formButtonDiv}>
             <button
               onClick={handleLogin}
-              style={{ borderRadius: "25px", padding: "0.5rem 2rem" }}
+              style={{ borderRadius: "25px", padding: "0.5rem 2rem", width:"160px" }}
               className="btn btn-lg btn-success g-recaptcha"
             >
               Log In
