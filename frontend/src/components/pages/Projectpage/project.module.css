@@ -97,3 +97,27 @@
 .backbtn:hover{
     background-color: rgb(201, 200, 200);
 }
+
+.intputtag{
+    height: 39px;
+    width: 275px;
+    border: 1px solid green;
+    background-color: #E8F0FE;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 1000px;
+    transform: none;
+}
+.intputtag:hover{
+    border: 1px solid green;
+    background-color: #E8F0FE;
+}
+.addtodobtn{
+    height: 39px;
+    width: 59px;
+    background-color: #32bd42;
+    border-radius: 5px;
+    margin-left: 50px;
+    
+}
