@@ -9,17 +9,17 @@ Deploy link: https://timecamp.vercel.app/
 <h1>Some glimpse from our Website </h1>
 
 <h1>Home Page</h1>
-<img src="./Screenshots/timecamp1.png" alt=""/>
+<img src="./screenshots/timecamp1.png" alt=""/>
 
 <h1>Features Page</h1>
-<img src="./Screenshots/timecamp2.png" alt=""/>
+<img src="./screenshots/timecamp2.png" alt=""/>
 
 <h1>Login Page</h1>
-<img src="./Screenshots/time3.png" alt=""/>
+<img src="./screenshots/time3.png" alt=""/>
 
 
 <h1>Timesheet Page</h1>
-<img src="./Screenshots/timecamp4.png" alt=""/>
+<img src="./screenshots/timecamp4.png" alt=""/>
 
 
 
