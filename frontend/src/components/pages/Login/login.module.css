@@ -5,6 +5,7 @@
   margin: auto;
   margin-top: 5rem;
 }
+
 .leftDivInMain {
   width: 47%;
   padding: 1rem;
@@ -96,4 +97,7 @@
 }
 .needSignup {
   margin: 0.5rem 15%;
+}
+.btn-lg{
+  width: 180px;
 }

@@ -108,6 +108,7 @@ const H3 = styled.h3`
   font-weight: 500;
   line-height: 1.1;
   margin-top: 0;
+  background-color: #f3f3f3;
   & button {
     font-size: 15px;
     text-decoration: none;
@@ -121,6 +122,7 @@ const H3 = styled.h3`
     user-select: none;
     line-height: 1.25;
     transition: all 0.15s ease-in-out;
+    background-color: #f3f3f3;
   }
 `;
 
@@ -128,7 +130,7 @@ const CardBody = styled.div`
   margin: 0 !important;
   padding: 1rem 0 0;
   flex: 1 1 auto;
-
+  background-color: #f3f3f3;
   & p {
     text-align: left;
     margin-top: 0;
@@ -137,6 +139,7 @@ const CardBody = styled.div`
 `;
 const XYZ = styled.div`
   border-bottom: 0;
+  background-color: #f3f3f3;
   padding: 0;
   & h3 {
     padding: 0;

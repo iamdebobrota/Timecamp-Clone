@@ -21,12 +21,14 @@ import { MdPeopleOutline,MdOutlineDone , MdOutlineAttachMoney} from "react-icons
 import { GoListUnordered } from "react-icons/go";
 import { RiSignalTowerLine } from "react-icons/ri";
 import { TbRocket,TbMicrophone2 } from "react-icons/tb";
+// import TimeHeader from "./TimeHeader"; 
 
 
 // A <span>›> </span>
 
 export default function SideNavbar() {
   return (
+    <>
     <div>
       {/* <Link to='#' className='menu-bars'>hello</Link> */}
       <nav className="main-nav">
@@ -51,9 +53,11 @@ export default function SideNavbar() {
               <Link to="/app" className="dash">
                 <span className="spanright">
                   <IoMdTime />
-                </span>{" "}
+                </span>
                 <p>TimeSheet </p>
               </Link>
+
+             
             </li>
           </ul>
 
@@ -386,5 +390,7 @@ export default function SideNavbar() {
 
 
     </div>
+    {/* <TimeHeader/> */}
+    </>
   );
 }

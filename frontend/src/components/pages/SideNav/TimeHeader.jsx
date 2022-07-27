@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 
 import "./Timeheader.scss";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaHourglassStart , FaBullhorn, FaDownload} from 'react-icons/fa';
 import { IoSettingsOutline , IoPersonCircle} from "react-icons/io5";
 import { BsQuestionCircle , BsChat, BsBook} from "react-icons/bs";
@@ -11,30 +11,14 @@ import { ImInfo } from "react-icons/im";
 import { BiHeart } from "react-icons/bi";
 import { VscGlobe } from "react-icons/vsc";
 import { AiOutlinePoweroff } from "react-icons/ai";
-import { AuthContext } from '../../../AuthContext/authContext';
 
 
 
 
 
-function TimeHeader(props) {
-    const { isAuth, setIsAuth } = useContext(AuthContext);
-    const heading = props.heading
-const navigate= useNavigate()
-
-const handlelogout=()=>{
-    setIsAuth(false)
-    navigate('/')
-}
-
-let lo=JSON.parse(localStorage.getItem('loggedInUser'))
-// console.log(lo.email);
-
-let name= lo.email.split('@')[0]
-console.log(name);
-
+function TimeHeader() {
   return (
-    <div className='main_header'>
+    <div>
         <header className='header' >
 
         <div className="center">
@@ -53,7 +37,7 @@ console.log(name);
         <hr />
 
         <div className="secondheader">
-           <p className='btime'>{heading}</p>
+           <p className='btime'>Timesheet</p>
            <ul className='right-icons'>
                 <li className="setting"><IoSettingsOutline/>
                 {/* dropdown start */}
@@ -87,32 +71,13 @@ console.log(name);
            <div className='plus'>+</div>
                 <li className="contact"><IoPersonCircle/>
                     <ul className='thirdDropdown'>
-                        <li>
-                            <Link className='emailcontact' to="#"><div><FaRegUser/>
-                        </div> 
-                        <div>
-                            <p className='empara'>
-                               {lo.email}
-                                </p>
-
-                         <p  className='empara'>
-                            {name}
-                            </p></div>
-                            
-                            </Link>
-                         </li>
+                        <li><Link className='emailcontact' to="#"><div><FaRegUser/></div> <div><p className='empara'>masaischool@gmail.com</p> <p  className='empara'>masaischool</p></div></Link></li>
                         <hr />
                         <li><Link className='emailcontact' to="#"><div><FaDownload/></div> <div><p className='empara'>Download App</p> </div></Link></li>
                         <li><Link className='emailcontact' to="#"><div><VscGlobe/></div> <div><p className='empara'>Browser Plugin</p> </div></Link></li>
                         <hr />
                      
-                        <li onClick={()=>handlelogout}>
-                            <Link className='emailcontact' to="/">
-                                <div><AiOutlinePoweroff/></div>
-                                 <div>
-                            <p className='empara'>Logout</p> 
-                            
-                            </div></Link></li>
+                        <li><Link className='emailcontact' to="#"><div><AiOutlinePoweroff/></div> <div><p className='empara'>Logout</p> </div></Link></li>
                     </ul>
                 
                 </li>
@@ -124,6 +89,24 @@ console.log(name);
     </div>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

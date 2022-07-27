@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../AuthContext/authContext";
 import { Header } from "../Header/Header";
 import styles from "./login.module.css";
 
 const Login = () => {
   const [client, setClient] = useState({});
   const navigate = useNavigate();
-
+  const { isAuth, setIsAuth } = useContext(AuthContext);
   const handleChange = (e) => {
     let { name, value } = e.target;
     setClient({
@@ -31,6 +32,7 @@ const Login = () => {
       .then((res) => {
         localStorage.setItem("userid", JSON.stringify(res._id));
         if (res.token) {
+          setIsAuth(true)
           navigate("/app");
         } else {
           console.log("wrong credentials");
@@ -101,7 +103,7 @@ const Login = () => {
           <div className={styles.formInputs}>
             <input
               name="password"
-              type="string"
+              type="password"
               onChange={handleChange}
               className="form-control"
               placeholder="Password"
@@ -111,7 +113,7 @@ const Login = () => {
           <div className={styles.formButtonDiv}>
             <button
               onClick={handleLogin}
-              style={{ borderRadius: "25px", padding: "0.5rem 2rem" }}
+              style={{ borderRadius: "25px", padding: "0.5rem 2rem", width:"160px" }}
               className="btn btn-lg btn-success g-recaptcha"
             >
               Log In
