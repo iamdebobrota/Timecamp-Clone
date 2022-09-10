@@ -233,7 +233,7 @@ export const Fields = () => {
             </TextDiv>
             <ImgDiv>
               <img
-                src="https://cdn-m.timecamp.com/img/greenbranding/features/img-home-features.png"
+                src="https://cdn-m.timecamp.com/img/greenbranding/features/img-home-features.svg"
                 alt=""
               />
             </ImgDiv>
@@ -241,7 +241,7 @@ export const Fields = () => {
           <Row>
             <ImgDiv>
               <img
-                src="https://cdn-m.timecamp.com/img/greenbranding/features/reporting-features.png"
+                src="https://cdn-m.timecamp.com/img/greenbranding/features/reporting-features.svg"
                 alt=""
               />
             </ImgDiv>
@@ -346,7 +346,7 @@ export const Fields = () => {
             </TextDiv>
             <ImgDiv>
               <img
-                src="https://cdn-m.timecamp.com/img/greenbranding/features/project-structure.png"
+                src="https://cdn-m.timecamp.com/img/greenbranding/features/project-structure.svg"
                 alt=""
               />
             </ImgDiv>
@@ -354,7 +354,7 @@ export const Fields = () => {
           <Row>
             <ImgDiv>
               <img
-                src="https://cdn-m.timecamp.com/img/greenbranding/features/attendance-features.png"
+                src="https://cdn-m.timecamp.com/img/greenbranding/features/attendance-features.svg"
                 alt=""
               />
             </ImgDiv>

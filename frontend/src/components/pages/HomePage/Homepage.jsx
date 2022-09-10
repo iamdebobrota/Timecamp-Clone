@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Footer from "../Footer/Footer";
 import { Header } from "../Header/Header";
 import { Fields } from "./Fields";
+import { Pricing } from "./Pricing";
 import { Review } from "./Review";
 
 const Container = styled.div`
@@ -254,13 +255,13 @@ const Demo = styled.div`
     padding-right: 15px;
     padding-left: 15px;
 
-    & h2{
+    & h2 {
       font-size: 36px;
       font-weight: 800;
       width: 80%;
       margin: auto;
       text-align: center;
-      font-family: lato,sans-serif;
+      font-family: lato, sans-serif;
     }
   }
 
@@ -270,27 +271,25 @@ const Demo = styled.div`
     justify-content: center;
     align-items: center;
 
-    &>p{
+    & > p {
       margin-bottom: 0;
       margin-top: 0;
       font-weight: 700;
       padding-right: 1rem;
     }
-    &>a{
+    & > a {
       text-decoration: none;
-      color: #25cf60!important;
+      color: #25cf60 !important;
       cursor: pointer;
       font-weight: 700;
     }
   }
-
-  
 `;
 
 export const Homepage = () => {
   return (
     <div>
-<Header/>
+      <Header />
 
       <Container>
         <RowContainer>
@@ -389,10 +388,10 @@ export const Homepage = () => {
           </h2>
         </div>
       </Demo>
-      <Fields/>
-      <Review/>
-
-      <Footer/>
+      <Fields />
+      <Review />
+      <Pricing />
+      <Footer />
     </div>
   );
 };
